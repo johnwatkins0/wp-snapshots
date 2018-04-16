@@ -1,7 +1,8 @@
 {
   "name": "wp-snapshots",
   "version": "0.0.1",
-  "description": "A WordPress plugin providing a post type and display feature for images of notable people with text fields.",
+  "description":
+    "A WordPress plugin providing a post type and display feature for images of notable people with text fields.",
   "main": "src/js/index.js",
   "repository": "https://github.com/johnwatkins0/wp-snapshots",
   "author": "John Watkins <johnwatkins0@gmail.com>",
@@ -9,8 +10,9 @@
   "scripts": {
     "start": "webpack -w --config webpack/webpack.config.babel.js",
     "start:dev": "webpack-dev-server --config webpack/webpack.demo.config.babel.js",
-    "build": "webpack && webpack -p",
-    "lint": "stylelint --fix src/css && eslint --fix .",
+    "build":
+      "webpack --config webpack/webpack.config.babel.js && webpack -p --config webpack/webpack.config.babel.js && webpack --config webpack/webpack.demo.config.babel.js && webpack -p --config webpack/webpack.demo.config.babel.js",
+    "lint": "stylelint --fix src/css && eslint --fix src/js",
     "test": "jest --config=jest.config.js"
   },
   "husky": {
@@ -64,10 +66,7 @@
     "react-transition-group": "^2.3.1",
     "whatwg-fetch": "^2.0.4"
   },
-  "browserslist": [
-    "> 1%",
-    "last 2 versions"
-  ],
+  "browserslist": ["> 1%", "last 2 versions"],
   "stylelint": {
     "extends": "stylelint-config-wordpress",
     "rules": {

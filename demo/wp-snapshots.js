@@ -174,6 +174,594 @@
 /************************************************************************/
 /******/ ({
 
+/***/ "./demo/src/data/index.js":
+/*!********************************!*\
+  !*** ./demo/src/data/index.js ***!
+  \********************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _sourceUrlGenerator = __webpack_require__(/*! ../../../src/js/utils/sourceUrlGenerator */ "./src/js/utils/sourceUrlGenerator.js");
+
+var sourceUrl = (0, _sourceUrlGenerator.sourceUrlGenerator)();
+
+var testPosts = [{
+  id: 7647,
+  slug: 'donec-vel-volutpat',
+  title: {
+    rendered: 'Donec vel volutpat'
+  },
+  content: {
+    rendered: '<section><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quis libero at sapien tempus semper. Mauris quis ante velit. Donec vel volutpat sapien, eu efficitur mi. Etiam lacinia finibus erat, a porttitor massa auctor ut. Duis mauris nunc, sagittis non lobortis sed, volutpat quis dui. In accumsan blandit vestibulum. Aliquam erat volutpat.</p>\n</section>',
+    protected: false
+  },
+  excerpt: {
+    rendered: '<p>Nunc quis libero</p>\n',
+    protected: false
+  },
+  featured_media: 7634,
+  'snapshot-category': [71]
+}, {
+  id: 7646,
+  slug: 'donec-ut-eros',
+  title: {
+    rendered: 'Donec ut eros'
+  },
+  content: {
+    rendered: '<section><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi at placerat orci. Cras at nisi venenatis, finibus nisl non, pharetra enim. Aenean ut rhoncus elit. Mauris posuere risus risus, ut fermentum ligula ornare id. Donec ut eros ut nisi vulputate condimentum.</p>\n<p>Vivamus maximus metus sed tortor luctus lobortis. Phasellus orci magna, tempus non nisl at, hendrerit lobortis magna. Suspendisse potenti. Fusce sed sodales mi.</p>\n</section>',
+    protected: false
+  },
+  excerpt: {
+    rendered: '<p>Phasellus orci magna</p>\n',
+    protected: false
+  },
+  featured_media: 7635,
+  'snapshot-category': [71]
+}, {
+  id: 7645,
+  slug: 'vivamus-ullamcorper',
+  title: {
+    rendered: 'Vivamus ullamcorper'
+  },
+  content: {
+    rendered: '<section><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras rhoncus ac tortor eget euismod. Quisque sit amet eros rhoncus ipsum condimentum hendrerit at non tortor. Vivamus ullamcorper arcu eget consequat commodo. Fusce vitae metus ullamcorper, vulputate dolor eget, cursus purus. Etiam eu porta nibh. Praesent volutpat tincidunt sem sed faucibus. Nulla facilisis, massa ut gravida interdum, ex sem tempor libero, sit amet gravida eros sem in mi.</p>\n</section>',
+    protected: false
+  },
+  excerpt: {
+    rendered: '<p>Nulla facilisis</p>\n',
+    protected: false
+  },
+  featured_media: 7636,
+  'snapshot-category': [71]
+}, {
+  id: 7644,
+  slug: 'vestibulum-dapibus',
+  title: {
+    rendered: 'Vestibulum dapibus'
+  },
+  content: {
+    rendered: '<section><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum dapibus accumsan hendrerit. Duis mattis posuere nibh, id hendrerit arcu volutpat ullamcorper. Etiam in neque quis nunc convallis maximus quis at enim. Maecenas ac tellus ac leo aliquet venenatis. Nullam et sem non tellus viverra pellentesque. Proin nec dapibus massa. Nam gravida malesuada eros, a elementum urna sagittis vel.</p>\n<p>Morbi nec lobortis mi. Suspendisse fermentum metus id lorem faucibus ultricies. Suspendisse potenti. In vel tortor eget sem malesuada venenatis rhoncus nec odio. Aliquam facilisis mattis sem convallis lacinia. Nullam quis dictum odio.</p>\n</section>',
+    protected: false
+  },
+  excerpt: {
+    rendered: '<p>Nam gravida malesuada</p>\n',
+    protected: false
+  },
+  featured_media: 7637,
+  'snapshot-category': [71]
+}, {
+  id: 7643,
+  slug: 'ut-eget-orci',
+  title: {
+    rendered: 'Ut eget orci'
+  },
+  content: {
+    rendered: '<section><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut eget orci a felis interdum dictum in in eros. In id sem rhoncus, fringilla mauris ac, lobortis libero. Donec ex turpis, viverra quis malesuada vel, congue vitae neque. Ut facilisis vulputate tortor aliquam cursus. Nunc urna elit, fermentum et dignissim et, bibendum ullamcorper metus. Nam pretium lectus a auctor hendrerit. Maecenas interdum dignissim diam quis ullamcorper. Cras vulputate id dolor non vehicula. Sed pellentesque eget lorem dignissim faucibus. Duis scelerisque blandit egestas.</p>\n</section>',
+    protected: false
+  },
+  excerpt: {
+    rendered: '<p>Integer cursus </p>\n',
+    protected: false
+  },
+  featured_media: 7638,
+  'snapshot-category': [71]
+}, {
+  id: 7642,
+  slug: 'praesent-sollicitudin',
+  title: {
+    rendered: 'Praesent sollicitudin'
+  },
+  content: {
+    rendered: '<section><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sollicitudin odio et arcu vestibulum imperdiet. Mauris malesuada urna felis. Vivamus vel odio in nunc fringilla vulputate non a lorem. Aliquam sollicitudin sodales malesuada. Donec at tincidunt turpis, venenatis porta purus. Praesent sagittis, est sit amet elementum tincidunt, est urna consequat lectus, non lobortis ipsum metus ac leo. Etiam ac blandit diam, eu tempor lectus. Maecenas nisi sem, elementum non fermentum placerat, porttitor nec ligula. Pellentesque elit massa, volutpat quis lorem in, consectetur aliquet dolor.</p>\n<p>Ut efficitur vehicula sapien, vel ornare orci euismod quis. Mauris et augue maximus, mollis felis eu, vehicula enim. Phasellus sed felis nec tellus auctor efficitur vitae in lectus. Cras pretium venenatis imperdiet. Sed interdum lectus viverra accumsan facilisis.</p>\n</section>',
+    protected: false
+  },
+  excerpt: {
+    rendered: '<p>Curabitur mauris urna</p>\n',
+    protected: false
+  },
+  featured_media: 7639,
+  'snapshot-category': [71]
+}, {
+  id: 7641,
+  slug: 'nullam-ultricies',
+  title: {
+    rendered: 'Nullam ultricies'
+  },
+  content: {
+    rendered: '<section><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sollicitudin odio et arcu vestibulum imperdiet. Mauris malesuada urna felis. Vivamus vel odio in nunc fringilla vulputate non a lorem. Aliquam sollicitudin sodales malesuada. Donec at tincidunt turpis, venenatis porta purus. Praesent sagittis, est sit amet elementum tincidunt, est urna consequat lectus, non lobortis ipsum metus ac leo. Etiam ac blandit diam, eu tempor lectus.</p>\n<p>Maecenas nisi sem, elementum non fermentum placerat, porttitor nec ligula. Pellentesque elit massa, volutpat quis lorem in, consectetur aliquet dolor. Ut efficitur vehicula sapien, vel ornare orci euismod quis. Mauris et augue maximus, mollis felis eu, vehicula enim. Phasellus sed felis nec tellus auctor efficitur vitae in lectus. Cras pretium venenatis imperdiet. Sed interdum lectus viverra accumsan facilisis.</p>\n</section>',
+    protected: false
+  },
+  excerpt: {
+    rendered: '<p>Sed at efficitur</p>\n',
+    protected: false
+  },
+  featured_media: 7640,
+  'snapshot-category': [71]
+}];
+
+var testMedia = [{
+  id: 7640,
+  media_details: {
+    sizes: {
+      medium: {
+        file: 'concept-idea-innovation-212286-300x200.jpg',
+        width: 300,
+        height: 200,
+        mime_type: 'image/jpeg',
+        source_url: sourceUrl()
+      },
+      large: {
+        file: 'concept-idea-innovation-212286-1024x683.jpg',
+        width: 1024,
+        height: 683,
+        mime_type: 'image/jpeg',
+        source_url: sourceUrl()
+      }
+    }
+  }
+}, {
+  id: 7639,
+  media_details: {
+    sizes: {
+      medium: {
+        file: 'boy-child-clouds-346796-300x200.jpg',
+        width: 300,
+        height: 200,
+        mime_type: 'image/jpeg',
+        source_url: sourceUrl()
+      },
+      large: {
+        file: 'boy-child-clouds-346796-1024x683.jpg',
+        width: 1024,
+        height: 683,
+        mime_type: 'image/jpeg',
+        source_url: sourceUrl()
+      }
+    }
+  }
+}, {
+  id: 7638,
+  media_details: {
+    sizes: {
+      medium: {
+        file: 'pexels-photo-325521-300x200.jpeg',
+        width: 300,
+        height: 200,
+        mime_type: 'image/jpeg',
+        source_url: sourceUrl()
+      },
+      large: {
+        file: 'pexels-photo-325521-1024x683.jpeg',
+        width: 1024,
+        height: 683,
+        mime_type: 'image/jpeg',
+        source_url: sourceUrl()
+      }
+    }
+  }
+}, {
+  id: 7637,
+  media_details: {
+    sizes: {
+      medium: {
+        file: 'adult-aged-blur-834863-300x200.jpg',
+        width: 300,
+        height: 200,
+        mime_type: 'image/jpeg',
+        source_url: sourceUrl()
+      },
+      large: {
+        file: 'adult-aged-blur-834863-1024x683.jpg',
+        width: 1024,
+        height: 683,
+        mime_type: 'image/jpeg',
+        source_url: sourceUrl()
+      }
+    }
+  }
+}, {
+  id: 7636,
+  media_details: {
+    sizes: {
+      medium: {
+        file: 'adult-beautiful-girl-blue-875862-300x200.jpg',
+        width: 300,
+        height: 200,
+        mime_type: 'image/jpeg',
+        source_url: sourceUrl()
+      },
+      large: {
+        file: 'adult-beautiful-girl-blue-875862-1024x683.jpg',
+        width: 1024,
+        height: 683,
+        mime_type: 'image/jpeg',
+        source_url: sourceUrl()
+      }
+    }
+  }
+}, {
+  id: 7635,
+  media_details: {
+    sizes: {
+      medium: {
+        file: 'chill-guy-high-tatras-91224-300x200.jpg',
+        width: 300,
+        height: 200,
+        mime_type: 'image/jpeg',
+        source_url: sourceUrl()
+      },
+      large: {
+        file: 'chill-guy-high-tatras-91224-1024x682.jpg',
+        width: 1024,
+        height: 682,
+        mime_type: 'image/jpeg',
+        source_url: sourceUrl()
+      }
+    }
+  }
+}, {
+  id: 7634,
+  media_details: {
+    sizes: {
+      medium: {
+        file: 'alone-backlit-clouds-297977-300x200.jpg',
+        width: 300,
+        height: 200,
+        mime_type: 'image/jpeg',
+        source_url: sourceUrl()
+      },
+      large: {
+        file: 'alone-backlit-clouds-297977-1024x683.jpg',
+        width: 1024,
+        height: 683,
+        mime_type: 'image/jpeg',
+        source_url: sourceUrl()
+      }
+    }
+  }
+}];
+
+var testPostsWithMedia = [{
+  id: 7647,
+  slug: 'donec-vel-volutpat',
+  title: {
+    rendered: 'Donec vel volutpat'
+  },
+  content: {
+    rendered: '<section><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quis libero at sapien tempus semper. Mauris quis ante velit. Donec vel volutpat sapien, eu efficitur mi. Etiam lacinia finibus erat, a porttitor massa auctor ut. Duis mauris nunc, sagittis non lobortis sed, volutpat quis dui. In accumsan blandit vestibulum. Aliquam erat volutpat.</p>\n</section>',
+    protected: false
+  },
+  excerpt: {
+    rendered: '<p>Nunc quis libero</p>\n',
+    protected: false
+  },
+  featured_media: 7634,
+  'snapshot-category': [71],
+  image: {
+    id: 7634,
+    media_details: {
+      sizes: {
+        medium: {
+          file: 'alone-backlit-clouds-297977-300x200.jpg',
+          width: 300,
+          height: 200,
+          mime_type: 'image/jpeg',
+          source_url: sourceUrl()
+        },
+        large: {
+          file: 'alone-backlit-clouds-297977-1024x683.jpg',
+          width: 1024,
+          height: 683,
+          mime_type: 'image/jpeg',
+          source_url: sourceUrl()
+        }
+      }
+    }
+  }
+}, {
+  id: 7646,
+  slug: 'donec-ut-eros',
+  title: {
+    rendered: 'Donec ut eros'
+  },
+  content: {
+    rendered: '<section><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi at placerat orci. Cras at nisi venenatis, finibus nisl non, pharetra enim. Aenean ut rhoncus elit. Mauris posuere risus risus, ut fermentum ligula ornare id. Donec ut eros ut nisi vulputate condimentum.</p>\n<p>Vivamus maximus metus sed tortor luctus lobortis. Phasellus orci magna, tempus non nisl at, hendrerit lobortis magna. Suspendisse potenti. Fusce sed sodales mi.</p>\n</section>',
+    protected: false
+  },
+  excerpt: {
+    rendered: '<p>Phasellus orci magna</p>\n',
+    protected: false
+  },
+  featured_media: 7635,
+  'snapshot-category': [71],
+  image: {
+    id: 7635,
+    media_details: {
+      sizes: {
+        medium: {
+          file: 'chill-guy-high-tatras-91224-300x200.jpg',
+          width: 300,
+          height: 200,
+          mime_type: 'image/jpeg',
+          source_url: sourceUrl()
+        },
+        large: {
+          file: 'chill-guy-high-tatras-91224-1024x682.jpg',
+          width: 1024,
+          height: 682,
+          mime_type: 'image/jpeg',
+          source_url: sourceUrl()
+        }
+      }
+    }
+  }
+}, {
+  id: 7645,
+  slug: 'vivamus-ullamcorper',
+  title: {
+    rendered: 'Vivamus ullamcorper'
+  },
+  content: {
+    rendered: '<section><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras rhoncus ac tortor eget euismod. Quisque sit amet eros rhoncus ipsum condimentum hendrerit at non tortor. Vivamus ullamcorper arcu eget consequat commodo. Fusce vitae metus ullamcorper, vulputate dolor eget, cursus purus. Etiam eu porta nibh. Praesent volutpat tincidunt sem sed faucibus. Nulla facilisis, massa ut gravida interdum, ex sem tempor libero, sit amet gravida eros sem in mi.</p>\n</section>',
+    protected: false
+  },
+  excerpt: {
+    rendered: '<p>Nulla facilisis</p>\n',
+    protected: false
+  },
+  featured_media: 7636,
+  'snapshot-category': [71],
+  image: {
+    id: 7636,
+    media_details: {
+      sizes: {
+        medium: {
+          file: 'adult-beautiful-girl-blue-875862-300x200.jpg',
+          width: 300,
+          height: 200,
+          mime_type: 'image/jpeg',
+          source_url: sourceUrl()
+        },
+        large: {
+          file: 'adult-beautiful-girl-blue-875862-1024x683.jpg',
+          width: 1024,
+          height: 683,
+          mime_type: 'image/jpeg',
+          source_url: sourceUrl()
+        }
+      }
+    }
+  }
+}, {
+  id: 7644,
+  slug: 'vestibulum-dapibus',
+  title: {
+    rendered: 'Vestibulum dapibus'
+  },
+  content: {
+    rendered: '<section><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum dapibus accumsan hendrerit. Duis mattis posuere nibh, id hendrerit arcu volutpat ullamcorper. Etiam in neque quis nunc convallis maximus quis at enim. Maecenas ac tellus ac leo aliquet venenatis. Nullam et sem non tellus viverra pellentesque. Proin nec dapibus massa. Nam gravida malesuada eros, a elementum urna sagittis vel.</p>\n<p>Morbi nec lobortis mi. Suspendisse fermentum metus id lorem faucibus ultricies. Suspendisse potenti. In vel tortor eget sem malesuada venenatis rhoncus nec odio. Aliquam facilisis mattis sem convallis lacinia. Nullam quis dictum odio.</p>\n</section>',
+    protected: false
+  },
+  excerpt: {
+    rendered: '<p>Nam gravida malesuada</p>\n',
+    protected: false
+  },
+  featured_media: 7637,
+  'snapshot-category': [71],
+  image: {
+    id: 7637,
+    media_details: {
+      sizes: {
+        medium: {
+          file: 'adult-aged-blur-834863-300x200.jpg',
+          width: 300,
+          height: 200,
+          mime_type: 'image/jpeg',
+          source_url: sourceUrl()
+        },
+        large: {
+          file: 'adult-aged-blur-834863-1024x683.jpg',
+          width: 1024,
+          height: 683,
+          mime_type: 'image/jpeg',
+          source_url: sourceUrl()
+        }
+      }
+    }
+  }
+}, {
+  id: 7643,
+  slug: 'ut-eget-orci',
+  title: {
+    rendered: 'Ut eget orci'
+  },
+  content: {
+    rendered: '<section><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut eget orci a felis interdum dictum in in eros. In id sem rhoncus, fringilla mauris ac, lobortis libero. Donec ex turpis, viverra quis malesuada vel, congue vitae neque. Ut facilisis vulputate tortor aliquam cursus. Nunc urna elit, fermentum et dignissim et, bibendum ullamcorper metus. Nam pretium lectus a auctor hendrerit. Maecenas interdum dignissim diam quis ullamcorper. Cras vulputate id dolor non vehicula. Sed pellentesque eget lorem dignissim faucibus. Duis scelerisque blandit egestas.</p>\n</section>',
+    protected: false
+  },
+  excerpt: {
+    rendered: '<p>Integer cursus </p>\n',
+    protected: false
+  },
+  featured_media: 7638,
+  'snapshot-category': [71],
+  image: {
+    id: 7638,
+    media_details: {
+      sizes: {
+        medium: {
+          file: 'pexels-photo-325521-300x200.jpeg',
+          width: 300,
+          height: 200,
+          mime_type: 'image/jpeg',
+          source_url: sourceUrl()
+        },
+        large: {
+          file: 'pexels-photo-325521-1024x683.jpeg',
+          width: 1024,
+          height: 683,
+          mime_type: 'image/jpeg',
+          source_url: sourceUrl()
+        }
+      }
+    }
+  }
+}, {
+  id: 7642,
+  slug: 'praesent-sollicitudin',
+  title: {
+    rendered: 'Praesent sollicitudin'
+  },
+  content: {
+    rendered: '<section><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sollicitudin odio et arcu vestibulum imperdiet. Mauris malesuada urna felis. Vivamus vel odio in nunc fringilla vulputate non a lorem. Aliquam sollicitudin sodales malesuada. Donec at tincidunt turpis, venenatis porta purus. Praesent sagittis, est sit amet elementum tincidunt, est urna consequat lectus, non lobortis ipsum metus ac leo. Etiam ac blandit diam, eu tempor lectus. Maecenas nisi sem, elementum non fermentum placerat, porttitor nec ligula. Pellentesque elit massa, volutpat quis lorem in, consectetur aliquet dolor.</p>\n<p>Ut efficitur vehicula sapien, vel ornare orci euismod quis. Mauris et augue maximus, mollis felis eu, vehicula enim. Phasellus sed felis nec tellus auctor efficitur vitae in lectus. Cras pretium venenatis imperdiet. Sed interdum lectus viverra accumsan facilisis.</p>\n</section>',
+    protected: false
+  },
+  excerpt: {
+    rendered: '<p>Curabitur mauris urna</p>\n',
+    protected: false
+  },
+  featured_media: 7639,
+  'snapshot-category': [71],
+  image: {
+    id: 7639,
+    media_details: {
+      sizes: {
+        medium: {
+          file: 'boy-child-clouds-346796-300x200.jpg',
+          width: 300,
+          height: 200,
+          mime_type: 'image/jpeg',
+          source_url: sourceUrl()
+        },
+        large: {
+          file: 'boy-child-clouds-346796-1024x683.jpg',
+          width: 1024,
+          height: 683,
+          mime_type: 'image/jpeg',
+          source_url: sourceUrl()
+        }
+      }
+    }
+  }
+}, {
+  id: 7641,
+  slug: 'nullam-ultricies',
+  title: {
+    rendered: 'Nullam ultricies'
+  },
+  content: {
+    rendered: '<section><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sollicitudin odio et arcu vestibulum imperdiet. Mauris malesuada urna felis. Vivamus vel odio in nunc fringilla vulputate non a lorem. Aliquam sollicitudin sodales malesuada. Donec at tincidunt turpis, venenatis porta purus. Praesent sagittis, est sit amet elementum tincidunt, est urna consequat lectus, non lobortis ipsum metus ac leo. Etiam ac blandit diam, eu tempor lectus.</p>\n<p>Maecenas nisi sem, elementum non fermentum placerat, porttitor nec ligula. Pellentesque elit massa, volutpat quis lorem in, consectetur aliquet dolor. Ut efficitur vehicula sapien, vel ornare orci euismod quis. Mauris et augue maximus, mollis felis eu, vehicula enim. Phasellus sed felis nec tellus auctor efficitur vitae in lectus. Cras pretium venenatis imperdiet. Sed interdum lectus viverra accumsan facilisis.</p>\n</section>',
+    protected: false
+  },
+  excerpt: {
+    rendered: '<p>Sed at efficitur</p>\n',
+    protected: false
+  },
+  featured_media: 7640,
+  'snapshot-category': [71],
+  image: {
+    id: 7640,
+    media_details: {
+      sizes: {
+        medium: {
+          file: 'concept-idea-innovation-212286-300x200.jpg',
+          width: 300,
+          height: 200,
+          mime_type: 'image/jpeg',
+          source_url: sourceUrl()
+        },
+        large: {
+          file: 'concept-idea-innovation-212286-1024x683.jpg',
+          width: 1024,
+          height: 683,
+          mime_type: 'image/jpeg',
+          source_url: sourceUrl()
+        }
+      }
+    }
+  }
+}];
+
+var testState = {
+  posts: testPosts
+};
+
+module.exports = {
+  testPosts: testPosts,
+  testMedia: testMedia,
+  testPostsWithMedia: testPostsWithMedia,
+  testState: testState
+};
+
+/***/ }),
+
+/***/ "./demo/src/index.js":
+/*!***************************!*\
+  !*** ./demo/src/index.js ***!
+  \***************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(global) {
+
+var _lodash = __webpack_require__(/*! lodash.set */ "./node_modules/lodash.set/index.js");
+
+var _lodash2 = _interopRequireDefault(_lodash);
+
+var _data = __webpack_require__(/*! ./data */ "./demo/src/data/index.js");
+
+var _ = __webpack_require__(/*! ../.. */ "./src/js/index.js");
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var jsonPromise = function jsonPromise(url) {
+  return new Promise(function (resolve) {
+    if (url.indexOf('?snapshot-category') > -1) {
+      resolve(_data.testPosts);
+    } else {
+      resolve(_data.testMedia);
+    }
+  });
+};
+
+(0, _lodash2.default)(global, 'fetch', function (url) {
+  return new Promise(function (resolve) {
+    resolve({ json: function json() {
+        return jsonPromise(url);
+      } });
+  });
+});
+
+window.removeEventListener('load', _.start);
+window.addEventListener('load', _.startApp);
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../node_modules/webpack/buildin/global.js */ "./node_modules/webpack/buildin/global.js")))
+
+/***/ }),
+
 /***/ "./node_modules/babel-runtime/node_modules/regenerator-runtime/runtime-module.js":
 /*!***************************************************************************************!*\
   !*** ./node_modules/babel-runtime/node_modules/regenerator-runtime/runtime-module.js ***!
@@ -7646,6 +8234,997 @@ function get(object, path, defaultValue) {
 }
 
 module.exports = get;
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../webpack/buildin/global.js */ "./node_modules/webpack/buildin/global.js")))
+
+/***/ }),
+
+/***/ "./node_modules/lodash.set/index.js":
+/*!******************************************!*\
+  !*** ./node_modules/lodash.set/index.js ***!
+  \******************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(global) {
+
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+
+/**
+ * lodash (Custom Build) <https://lodash.com/>
+ * Build: `lodash modularize exports="npm" -o ./`
+ * Copyright jQuery Foundation and other contributors <https://jquery.org/>
+ * Released under MIT license <https://lodash.com/license>
+ * Based on Underscore.js 1.8.3 <http://underscorejs.org/LICENSE>
+ * Copyright Jeremy Ashkenas, DocumentCloud and Investigative Reporters & Editors
+ */
+
+/** Used as the `TypeError` message for "Functions" methods. */
+var FUNC_ERROR_TEXT = 'Expected a function';
+
+/** Used to stand-in for `undefined` hash values. */
+var HASH_UNDEFINED = '__lodash_hash_undefined__';
+
+/** Used as references for various `Number` constants. */
+var INFINITY = 1 / 0,
+    MAX_SAFE_INTEGER = 9007199254740991;
+
+/** `Object#toString` result references. */
+var funcTag = '[object Function]',
+    genTag = '[object GeneratorFunction]',
+    symbolTag = '[object Symbol]';
+
+/** Used to match property names within property paths. */
+var reIsDeepProp = /\.|\[(?:[^[\]]*|(["'])(?:(?!\1)[^\\]|\\.)*?\1)\]/,
+    reIsPlainProp = /^\w*$/,
+    reLeadingDot = /^\./,
+    rePropName = /[^.[\]]+|\[(?:(-?\d+(?:\.\d+)?)|(["'])((?:(?!\2)[^\\]|\\.)*?)\2)\]|(?=(?:\.|\[\])(?:\.|\[\]|$))/g;
+
+/**
+ * Used to match `RegExp`
+ * [syntax characters](http://ecma-international.org/ecma-262/7.0/#sec-patterns).
+ */
+var reRegExpChar = /[\\^$.*+?()[\]{}|]/g;
+
+/** Used to match backslashes in property paths. */
+var reEscapeChar = /\\(\\)?/g;
+
+/** Used to detect host constructors (Safari). */
+var reIsHostCtor = /^\[object .+?Constructor\]$/;
+
+/** Used to detect unsigned integer values. */
+var reIsUint = /^(?:0|[1-9]\d*)$/;
+
+/** Detect free variable `global` from Node.js. */
+var freeGlobal = (typeof global === 'undefined' ? 'undefined' : _typeof(global)) == 'object' && global && global.Object === Object && global;
+
+/** Detect free variable `self`. */
+var freeSelf = (typeof self === 'undefined' ? 'undefined' : _typeof(self)) == 'object' && self && self.Object === Object && self;
+
+/** Used as a reference to the global object. */
+var root = freeGlobal || freeSelf || Function('return this')();
+
+/**
+ * Gets the value at `key` of `object`.
+ *
+ * @private
+ * @param {Object} [object] The object to query.
+ * @param {string} key The key of the property to get.
+ * @returns {*} Returns the property value.
+ */
+function getValue(object, key) {
+  return object == null ? undefined : object[key];
+}
+
+/**
+ * Checks if `value` is a host object in IE < 9.
+ *
+ * @private
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is a host object, else `false`.
+ */
+function isHostObject(value) {
+  // Many host objects are `Object` objects that can coerce to strings
+  // despite having improperly defined `toString` methods.
+  var result = false;
+  if (value != null && typeof value.toString != 'function') {
+    try {
+      result = !!(value + '');
+    } catch (e) {}
+  }
+  return result;
+}
+
+/** Used for built-in method references. */
+var arrayProto = Array.prototype,
+    funcProto = Function.prototype,
+    objectProto = Object.prototype;
+
+/** Used to detect overreaching core-js shims. */
+var coreJsData = root['__core-js_shared__'];
+
+/** Used to detect methods masquerading as native. */
+var maskSrcKey = function () {
+  var uid = /[^.]+$/.exec(coreJsData && coreJsData.keys && coreJsData.keys.IE_PROTO || '');
+  return uid ? 'Symbol(src)_1.' + uid : '';
+}();
+
+/** Used to resolve the decompiled source of functions. */
+var funcToString = funcProto.toString;
+
+/** Used to check objects for own properties. */
+var hasOwnProperty = objectProto.hasOwnProperty;
+
+/**
+ * Used to resolve the
+ * [`toStringTag`](http://ecma-international.org/ecma-262/7.0/#sec-object.prototype.tostring)
+ * of values.
+ */
+var objectToString = objectProto.toString;
+
+/** Used to detect if a method is native. */
+var reIsNative = RegExp('^' + funcToString.call(hasOwnProperty).replace(reRegExpChar, '\\$&').replace(/hasOwnProperty|(function).*?(?=\\\()| for .+?(?=\\\])/g, '$1.*?') + '$');
+
+/** Built-in value references. */
+var _Symbol = root.Symbol,
+    splice = arrayProto.splice;
+
+/* Built-in method references that are verified to be native. */
+var Map = getNative(root, 'Map'),
+    nativeCreate = getNative(Object, 'create');
+
+/** Used to convert symbols to primitives and strings. */
+var symbolProto = _Symbol ? _Symbol.prototype : undefined,
+    symbolToString = symbolProto ? symbolProto.toString : undefined;
+
+/**
+ * Creates a hash object.
+ *
+ * @private
+ * @constructor
+ * @param {Array} [entries] The key-value pairs to cache.
+ */
+function Hash(entries) {
+  var index = -1,
+      length = entries ? entries.length : 0;
+
+  this.clear();
+  while (++index < length) {
+    var entry = entries[index];
+    this.set(entry[0], entry[1]);
+  }
+}
+
+/**
+ * Removes all key-value entries from the hash.
+ *
+ * @private
+ * @name clear
+ * @memberOf Hash
+ */
+function hashClear() {
+  this.__data__ = nativeCreate ? nativeCreate(null) : {};
+}
+
+/**
+ * Removes `key` and its value from the hash.
+ *
+ * @private
+ * @name delete
+ * @memberOf Hash
+ * @param {Object} hash The hash to modify.
+ * @param {string} key The key of the value to remove.
+ * @returns {boolean} Returns `true` if the entry was removed, else `false`.
+ */
+function hashDelete(key) {
+  return this.has(key) && delete this.__data__[key];
+}
+
+/**
+ * Gets the hash value for `key`.
+ *
+ * @private
+ * @name get
+ * @memberOf Hash
+ * @param {string} key The key of the value to get.
+ * @returns {*} Returns the entry value.
+ */
+function hashGet(key) {
+  var data = this.__data__;
+  if (nativeCreate) {
+    var result = data[key];
+    return result === HASH_UNDEFINED ? undefined : result;
+  }
+  return hasOwnProperty.call(data, key) ? data[key] : undefined;
+}
+
+/**
+ * Checks if a hash value for `key` exists.
+ *
+ * @private
+ * @name has
+ * @memberOf Hash
+ * @param {string} key The key of the entry to check.
+ * @returns {boolean} Returns `true` if an entry for `key` exists, else `false`.
+ */
+function hashHas(key) {
+  var data = this.__data__;
+  return nativeCreate ? data[key] !== undefined : hasOwnProperty.call(data, key);
+}
+
+/**
+ * Sets the hash `key` to `value`.
+ *
+ * @private
+ * @name set
+ * @memberOf Hash
+ * @param {string} key The key of the value to set.
+ * @param {*} value The value to set.
+ * @returns {Object} Returns the hash instance.
+ */
+function hashSet(key, value) {
+  var data = this.__data__;
+  data[key] = nativeCreate && value === undefined ? HASH_UNDEFINED : value;
+  return this;
+}
+
+// Add methods to `Hash`.
+Hash.prototype.clear = hashClear;
+Hash.prototype['delete'] = hashDelete;
+Hash.prototype.get = hashGet;
+Hash.prototype.has = hashHas;
+Hash.prototype.set = hashSet;
+
+/**
+ * Creates an list cache object.
+ *
+ * @private
+ * @constructor
+ * @param {Array} [entries] The key-value pairs to cache.
+ */
+function ListCache(entries) {
+  var index = -1,
+      length = entries ? entries.length : 0;
+
+  this.clear();
+  while (++index < length) {
+    var entry = entries[index];
+    this.set(entry[0], entry[1]);
+  }
+}
+
+/**
+ * Removes all key-value entries from the list cache.
+ *
+ * @private
+ * @name clear
+ * @memberOf ListCache
+ */
+function listCacheClear() {
+  this.__data__ = [];
+}
+
+/**
+ * Removes `key` and its value from the list cache.
+ *
+ * @private
+ * @name delete
+ * @memberOf ListCache
+ * @param {string} key The key of the value to remove.
+ * @returns {boolean} Returns `true` if the entry was removed, else `false`.
+ */
+function listCacheDelete(key) {
+  var data = this.__data__,
+      index = assocIndexOf(data, key);
+
+  if (index < 0) {
+    return false;
+  }
+  var lastIndex = data.length - 1;
+  if (index == lastIndex) {
+    data.pop();
+  } else {
+    splice.call(data, index, 1);
+  }
+  return true;
+}
+
+/**
+ * Gets the list cache value for `key`.
+ *
+ * @private
+ * @name get
+ * @memberOf ListCache
+ * @param {string} key The key of the value to get.
+ * @returns {*} Returns the entry value.
+ */
+function listCacheGet(key) {
+  var data = this.__data__,
+      index = assocIndexOf(data, key);
+
+  return index < 0 ? undefined : data[index][1];
+}
+
+/**
+ * Checks if a list cache value for `key` exists.
+ *
+ * @private
+ * @name has
+ * @memberOf ListCache
+ * @param {string} key The key of the entry to check.
+ * @returns {boolean} Returns `true` if an entry for `key` exists, else `false`.
+ */
+function listCacheHas(key) {
+  return assocIndexOf(this.__data__, key) > -1;
+}
+
+/**
+ * Sets the list cache `key` to `value`.
+ *
+ * @private
+ * @name set
+ * @memberOf ListCache
+ * @param {string} key The key of the value to set.
+ * @param {*} value The value to set.
+ * @returns {Object} Returns the list cache instance.
+ */
+function listCacheSet(key, value) {
+  var data = this.__data__,
+      index = assocIndexOf(data, key);
+
+  if (index < 0) {
+    data.push([key, value]);
+  } else {
+    data[index][1] = value;
+  }
+  return this;
+}
+
+// Add methods to `ListCache`.
+ListCache.prototype.clear = listCacheClear;
+ListCache.prototype['delete'] = listCacheDelete;
+ListCache.prototype.get = listCacheGet;
+ListCache.prototype.has = listCacheHas;
+ListCache.prototype.set = listCacheSet;
+
+/**
+ * Creates a map cache object to store key-value pairs.
+ *
+ * @private
+ * @constructor
+ * @param {Array} [entries] The key-value pairs to cache.
+ */
+function MapCache(entries) {
+  var index = -1,
+      length = entries ? entries.length : 0;
+
+  this.clear();
+  while (++index < length) {
+    var entry = entries[index];
+    this.set(entry[0], entry[1]);
+  }
+}
+
+/**
+ * Removes all key-value entries from the map.
+ *
+ * @private
+ * @name clear
+ * @memberOf MapCache
+ */
+function mapCacheClear() {
+  this.__data__ = {
+    'hash': new Hash(),
+    'map': new (Map || ListCache)(),
+    'string': new Hash()
+  };
+}
+
+/**
+ * Removes `key` and its value from the map.
+ *
+ * @private
+ * @name delete
+ * @memberOf MapCache
+ * @param {string} key The key of the value to remove.
+ * @returns {boolean} Returns `true` if the entry was removed, else `false`.
+ */
+function mapCacheDelete(key) {
+  return getMapData(this, key)['delete'](key);
+}
+
+/**
+ * Gets the map value for `key`.
+ *
+ * @private
+ * @name get
+ * @memberOf MapCache
+ * @param {string} key The key of the value to get.
+ * @returns {*} Returns the entry value.
+ */
+function mapCacheGet(key) {
+  return getMapData(this, key).get(key);
+}
+
+/**
+ * Checks if a map value for `key` exists.
+ *
+ * @private
+ * @name has
+ * @memberOf MapCache
+ * @param {string} key The key of the entry to check.
+ * @returns {boolean} Returns `true` if an entry for `key` exists, else `false`.
+ */
+function mapCacheHas(key) {
+  return getMapData(this, key).has(key);
+}
+
+/**
+ * Sets the map `key` to `value`.
+ *
+ * @private
+ * @name set
+ * @memberOf MapCache
+ * @param {string} key The key of the value to set.
+ * @param {*} value The value to set.
+ * @returns {Object} Returns the map cache instance.
+ */
+function mapCacheSet(key, value) {
+  getMapData(this, key).set(key, value);
+  return this;
+}
+
+// Add methods to `MapCache`.
+MapCache.prototype.clear = mapCacheClear;
+MapCache.prototype['delete'] = mapCacheDelete;
+MapCache.prototype.get = mapCacheGet;
+MapCache.prototype.has = mapCacheHas;
+MapCache.prototype.set = mapCacheSet;
+
+/**
+ * Assigns `value` to `key` of `object` if the existing value is not equivalent
+ * using [`SameValueZero`](http://ecma-international.org/ecma-262/7.0/#sec-samevaluezero)
+ * for equality comparisons.
+ *
+ * @private
+ * @param {Object} object The object to modify.
+ * @param {string} key The key of the property to assign.
+ * @param {*} value The value to assign.
+ */
+function assignValue(object, key, value) {
+  var objValue = object[key];
+  if (!(hasOwnProperty.call(object, key) && eq(objValue, value)) || value === undefined && !(key in object)) {
+    object[key] = value;
+  }
+}
+
+/**
+ * Gets the index at which the `key` is found in `array` of key-value pairs.
+ *
+ * @private
+ * @param {Array} array The array to inspect.
+ * @param {*} key The key to search for.
+ * @returns {number} Returns the index of the matched value, else `-1`.
+ */
+function assocIndexOf(array, key) {
+  var length = array.length;
+  while (length--) {
+    if (eq(array[length][0], key)) {
+      return length;
+    }
+  }
+  return -1;
+}
+
+/**
+ * The base implementation of `_.isNative` without bad shim checks.
+ *
+ * @private
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is a native function,
+ *  else `false`.
+ */
+function baseIsNative(value) {
+  if (!isObject(value) || isMasked(value)) {
+    return false;
+  }
+  var pattern = isFunction(value) || isHostObject(value) ? reIsNative : reIsHostCtor;
+  return pattern.test(toSource(value));
+}
+
+/**
+ * The base implementation of `_.set`.
+ *
+ * @private
+ * @param {Object} object The object to modify.
+ * @param {Array|string} path The path of the property to set.
+ * @param {*} value The value to set.
+ * @param {Function} [customizer] The function to customize path creation.
+ * @returns {Object} Returns `object`.
+ */
+function baseSet(object, path, value, customizer) {
+  if (!isObject(object)) {
+    return object;
+  }
+  path = isKey(path, object) ? [path] : castPath(path);
+
+  var index = -1,
+      length = path.length,
+      lastIndex = length - 1,
+      nested = object;
+
+  while (nested != null && ++index < length) {
+    var key = toKey(path[index]),
+        newValue = value;
+
+    if (index != lastIndex) {
+      var objValue = nested[key];
+      newValue = customizer ? customizer(objValue, key, nested) : undefined;
+      if (newValue === undefined) {
+        newValue = isObject(objValue) ? objValue : isIndex(path[index + 1]) ? [] : {};
+      }
+    }
+    assignValue(nested, key, newValue);
+    nested = nested[key];
+  }
+  return object;
+}
+
+/**
+ * The base implementation of `_.toString` which doesn't convert nullish
+ * values to empty strings.
+ *
+ * @private
+ * @param {*} value The value to process.
+ * @returns {string} Returns the string.
+ */
+function baseToString(value) {
+  // Exit early for strings to avoid a performance hit in some environments.
+  if (typeof value == 'string') {
+    return value;
+  }
+  if (isSymbol(value)) {
+    return symbolToString ? symbolToString.call(value) : '';
+  }
+  var result = value + '';
+  return result == '0' && 1 / value == -INFINITY ? '-0' : result;
+}
+
+/**
+ * Casts `value` to a path array if it's not one.
+ *
+ * @private
+ * @param {*} value The value to inspect.
+ * @returns {Array} Returns the cast property path array.
+ */
+function castPath(value) {
+  return isArray(value) ? value : stringToPath(value);
+}
+
+/**
+ * Gets the data for `map`.
+ *
+ * @private
+ * @param {Object} map The map to query.
+ * @param {string} key The reference key.
+ * @returns {*} Returns the map data.
+ */
+function getMapData(map, key) {
+  var data = map.__data__;
+  return isKeyable(key) ? data[typeof key == 'string' ? 'string' : 'hash'] : data.map;
+}
+
+/**
+ * Gets the native function at `key` of `object`.
+ *
+ * @private
+ * @param {Object} object The object to query.
+ * @param {string} key The key of the method to get.
+ * @returns {*} Returns the function if it's native, else `undefined`.
+ */
+function getNative(object, key) {
+  var value = getValue(object, key);
+  return baseIsNative(value) ? value : undefined;
+}
+
+/**
+ * Checks if `value` is a valid array-like index.
+ *
+ * @private
+ * @param {*} value The value to check.
+ * @param {number} [length=MAX_SAFE_INTEGER] The upper bounds of a valid index.
+ * @returns {boolean} Returns `true` if `value` is a valid index, else `false`.
+ */
+function isIndex(value, length) {
+  length = length == null ? MAX_SAFE_INTEGER : length;
+  return !!length && (typeof value == 'number' || reIsUint.test(value)) && value > -1 && value % 1 == 0 && value < length;
+}
+
+/**
+ * Checks if `value` is a property name and not a property path.
+ *
+ * @private
+ * @param {*} value The value to check.
+ * @param {Object} [object] The object to query keys on.
+ * @returns {boolean} Returns `true` if `value` is a property name, else `false`.
+ */
+function isKey(value, object) {
+  if (isArray(value)) {
+    return false;
+  }
+  var type = typeof value === 'undefined' ? 'undefined' : _typeof(value);
+  if (type == 'number' || type == 'symbol' || type == 'boolean' || value == null || isSymbol(value)) {
+    return true;
+  }
+  return reIsPlainProp.test(value) || !reIsDeepProp.test(value) || object != null && value in Object(object);
+}
+
+/**
+ * Checks if `value` is suitable for use as unique object key.
+ *
+ * @private
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is suitable, else `false`.
+ */
+function isKeyable(value) {
+  var type = typeof value === 'undefined' ? 'undefined' : _typeof(value);
+  return type == 'string' || type == 'number' || type == 'symbol' || type == 'boolean' ? value !== '__proto__' : value === null;
+}
+
+/**
+ * Checks if `func` has its source masked.
+ *
+ * @private
+ * @param {Function} func The function to check.
+ * @returns {boolean} Returns `true` if `func` is masked, else `false`.
+ */
+function isMasked(func) {
+  return !!maskSrcKey && maskSrcKey in func;
+}
+
+/**
+ * Converts `string` to a property path array.
+ *
+ * @private
+ * @param {string} string The string to convert.
+ * @returns {Array} Returns the property path array.
+ */
+var stringToPath = memoize(function (string) {
+  string = toString(string);
+
+  var result = [];
+  if (reLeadingDot.test(string)) {
+    result.push('');
+  }
+  string.replace(rePropName, function (match, number, quote, string) {
+    result.push(quote ? string.replace(reEscapeChar, '$1') : number || match);
+  });
+  return result;
+});
+
+/**
+ * Converts `value` to a string key if it's not a string or symbol.
+ *
+ * @private
+ * @param {*} value The value to inspect.
+ * @returns {string|symbol} Returns the key.
+ */
+function toKey(value) {
+  if (typeof value == 'string' || isSymbol(value)) {
+    return value;
+  }
+  var result = value + '';
+  return result == '0' && 1 / value == -INFINITY ? '-0' : result;
+}
+
+/**
+ * Converts `func` to its source code.
+ *
+ * @private
+ * @param {Function} func The function to process.
+ * @returns {string} Returns the source code.
+ */
+function toSource(func) {
+  if (func != null) {
+    try {
+      return funcToString.call(func);
+    } catch (e) {}
+    try {
+      return func + '';
+    } catch (e) {}
+  }
+  return '';
+}
+
+/**
+ * Creates a function that memoizes the result of `func`. If `resolver` is
+ * provided, it determines the cache key for storing the result based on the
+ * arguments provided to the memoized function. By default, the first argument
+ * provided to the memoized function is used as the map cache key. The `func`
+ * is invoked with the `this` binding of the memoized function.
+ *
+ * **Note:** The cache is exposed as the `cache` property on the memoized
+ * function. Its creation may be customized by replacing the `_.memoize.Cache`
+ * constructor with one whose instances implement the
+ * [`Map`](http://ecma-international.org/ecma-262/7.0/#sec-properties-of-the-map-prototype-object)
+ * method interface of `delete`, `get`, `has`, and `set`.
+ *
+ * @static
+ * @memberOf _
+ * @since 0.1.0
+ * @category Function
+ * @param {Function} func The function to have its output memoized.
+ * @param {Function} [resolver] The function to resolve the cache key.
+ * @returns {Function} Returns the new memoized function.
+ * @example
+ *
+ * var object = { 'a': 1, 'b': 2 };
+ * var other = { 'c': 3, 'd': 4 };
+ *
+ * var values = _.memoize(_.values);
+ * values(object);
+ * // => [1, 2]
+ *
+ * values(other);
+ * // => [3, 4]
+ *
+ * object.a = 2;
+ * values(object);
+ * // => [1, 2]
+ *
+ * // Modify the result cache.
+ * values.cache.set(object, ['a', 'b']);
+ * values(object);
+ * // => ['a', 'b']
+ *
+ * // Replace `_.memoize.Cache`.
+ * _.memoize.Cache = WeakMap;
+ */
+function memoize(func, resolver) {
+  if (typeof func != 'function' || resolver && typeof resolver != 'function') {
+    throw new TypeError(FUNC_ERROR_TEXT);
+  }
+  var memoized = function memoized() {
+    var args = arguments,
+        key = resolver ? resolver.apply(this, args) : args[0],
+        cache = memoized.cache;
+
+    if (cache.has(key)) {
+      return cache.get(key);
+    }
+    var result = func.apply(this, args);
+    memoized.cache = cache.set(key, result);
+    return result;
+  };
+  memoized.cache = new (memoize.Cache || MapCache)();
+  return memoized;
+}
+
+// Assign cache to `_.memoize`.
+memoize.Cache = MapCache;
+
+/**
+ * Performs a
+ * [`SameValueZero`](http://ecma-international.org/ecma-262/7.0/#sec-samevaluezero)
+ * comparison between two values to determine if they are equivalent.
+ *
+ * @static
+ * @memberOf _
+ * @since 4.0.0
+ * @category Lang
+ * @param {*} value The value to compare.
+ * @param {*} other The other value to compare.
+ * @returns {boolean} Returns `true` if the values are equivalent, else `false`.
+ * @example
+ *
+ * var object = { 'a': 1 };
+ * var other = { 'a': 1 };
+ *
+ * _.eq(object, object);
+ * // => true
+ *
+ * _.eq(object, other);
+ * // => false
+ *
+ * _.eq('a', 'a');
+ * // => true
+ *
+ * _.eq('a', Object('a'));
+ * // => false
+ *
+ * _.eq(NaN, NaN);
+ * // => true
+ */
+function eq(value, other) {
+  return value === other || value !== value && other !== other;
+}
+
+/**
+ * Checks if `value` is classified as an `Array` object.
+ *
+ * @static
+ * @memberOf _
+ * @since 0.1.0
+ * @category Lang
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is an array, else `false`.
+ * @example
+ *
+ * _.isArray([1, 2, 3]);
+ * // => true
+ *
+ * _.isArray(document.body.children);
+ * // => false
+ *
+ * _.isArray('abc');
+ * // => false
+ *
+ * _.isArray(_.noop);
+ * // => false
+ */
+var isArray = Array.isArray;
+
+/**
+ * Checks if `value` is classified as a `Function` object.
+ *
+ * @static
+ * @memberOf _
+ * @since 0.1.0
+ * @category Lang
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is a function, else `false`.
+ * @example
+ *
+ * _.isFunction(_);
+ * // => true
+ *
+ * _.isFunction(/abc/);
+ * // => false
+ */
+function isFunction(value) {
+  // The use of `Object#toString` avoids issues with the `typeof` operator
+  // in Safari 8-9 which returns 'object' for typed array and other constructors.
+  var tag = isObject(value) ? objectToString.call(value) : '';
+  return tag == funcTag || tag == genTag;
+}
+
+/**
+ * Checks if `value` is the
+ * [language type](http://www.ecma-international.org/ecma-262/7.0/#sec-ecmascript-language-types)
+ * of `Object`. (e.g. arrays, functions, objects, regexes, `new Number(0)`, and `new String('')`)
+ *
+ * @static
+ * @memberOf _
+ * @since 0.1.0
+ * @category Lang
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is an object, else `false`.
+ * @example
+ *
+ * _.isObject({});
+ * // => true
+ *
+ * _.isObject([1, 2, 3]);
+ * // => true
+ *
+ * _.isObject(_.noop);
+ * // => true
+ *
+ * _.isObject(null);
+ * // => false
+ */
+function isObject(value) {
+  var type = typeof value === 'undefined' ? 'undefined' : _typeof(value);
+  return !!value && (type == 'object' || type == 'function');
+}
+
+/**
+ * Checks if `value` is object-like. A value is object-like if it's not `null`
+ * and has a `typeof` result of "object".
+ *
+ * @static
+ * @memberOf _
+ * @since 4.0.0
+ * @category Lang
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is object-like, else `false`.
+ * @example
+ *
+ * _.isObjectLike({});
+ * // => true
+ *
+ * _.isObjectLike([1, 2, 3]);
+ * // => true
+ *
+ * _.isObjectLike(_.noop);
+ * // => false
+ *
+ * _.isObjectLike(null);
+ * // => false
+ */
+function isObjectLike(value) {
+  return !!value && (typeof value === 'undefined' ? 'undefined' : _typeof(value)) == 'object';
+}
+
+/**
+ * Checks if `value` is classified as a `Symbol` primitive or object.
+ *
+ * @static
+ * @memberOf _
+ * @since 4.0.0
+ * @category Lang
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is a symbol, else `false`.
+ * @example
+ *
+ * _.isSymbol(Symbol.iterator);
+ * // => true
+ *
+ * _.isSymbol('abc');
+ * // => false
+ */
+function isSymbol(value) {
+  return (typeof value === 'undefined' ? 'undefined' : _typeof(value)) == 'symbol' || isObjectLike(value) && objectToString.call(value) == symbolTag;
+}
+
+/**
+ * Converts `value` to a string. An empty string is returned for `null`
+ * and `undefined` values. The sign of `-0` is preserved.
+ *
+ * @static
+ * @memberOf _
+ * @since 4.0.0
+ * @category Lang
+ * @param {*} value The value to process.
+ * @returns {string} Returns the string.
+ * @example
+ *
+ * _.toString(null);
+ * // => ''
+ *
+ * _.toString(-0);
+ * // => '-0'
+ *
+ * _.toString([1, 2, 3]);
+ * // => '1,2,3'
+ */
+function toString(value) {
+  return value == null ? '' : baseToString(value);
+}
+
+/**
+ * Sets the value at `path` of `object`. If a portion of `path` doesn't exist,
+ * it's created. Arrays are created for missing index properties while objects
+ * are created for all other missing properties. Use `_.setWith` to customize
+ * `path` creation.
+ *
+ * **Note:** This method mutates `object`.
+ *
+ * @static
+ * @memberOf _
+ * @since 3.7.0
+ * @category Object
+ * @param {Object} object The object to modify.
+ * @param {Array|string} path The path of the property to set.
+ * @param {*} value The value to set.
+ * @returns {Object} Returns `object`.
+ * @example
+ *
+ * var object = { 'a': [{ 'b': { 'c': 3 } }] };
+ *
+ * _.set(object, 'a[0].b.c', 4);
+ * console.log(object.a[0].b.c);
+ * // => 4
+ *
+ * _.set(object, ['x', '0', 'y', 'z'], 5);
+ * console.log(object.x[0].y.z);
+ * // => 5
+ */
+function set(object, path, value) {
+  return object == null ? object : baseSet(object, path, value);
+}
+
+module.exports = set;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../webpack/buildin/global.js */ "./node_modules/webpack/buildin/global.js")))
 
 /***/ }),
@@ -17016,14 +18595,65 @@ var getRootUrl = exports.getRootUrl = function getRootUrl() {
 
 /***/ }),
 
-/***/ 0:
-/*!******************************************!*\
-  !*** multi ./src/js ./src/css/style.css ***!
-  \******************************************/
+/***/ "./src/js/utils/sourceUrlGenerator.js":
+/*!********************************************!*\
+  !*** ./src/js/utils/sourceUrlGenerator.js ***!
+  \********************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /Users/jwatkins/commencement/wp-content/plugins/wp-snapshots/src/js */"./src/js/index.js");
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+/**
+ * Hacky, bad function for generating image URLs in the demo data.
+ * Not used in the real product.
+ *
+ * @return {function} A function generating the appropriate URL.
+ */
+var sourceUrlGenerator = exports.sourceUrlGenerator = function sourceUrlGenerator() {
+  var odd = true;
+  var index = 1;
+  var countingUp = true;
+  return function () {
+    var url = void 0;
+    if (odd) {
+      url = "/demo/src/images/300x200-" + index + ".jpg";
+    } else {
+      url = "/demo/src/images/1024x683-" + index + ".jpg";
+    }
+
+    odd = !odd;
+    if (odd === true) {
+      if (countingUp) {
+        index += 1;
+      } else {
+        index -= 1;
+      }
+    }
+
+    if (index > 7) {
+      index = 7;
+      countingUp = false;
+    }
+
+    return url;
+  };
+};
+
+/***/ }),
+
+/***/ 0:
+/*!********************************************!*\
+  !*** multi ./demo/src ./src/css/style.css ***!
+  \********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+__webpack_require__(/*! /Users/jwatkins/commencement/wp-content/plugins/wp-snapshots/demo/src */"./demo/src/index.js");
 module.exports = __webpack_require__(/*! /Users/jwatkins/commencement/wp-content/plugins/wp-snapshots/src/css/style.css */"./src/css/style.css");
 
 

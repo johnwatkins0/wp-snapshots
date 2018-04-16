@@ -1,7 +1,7 @@
 <?php
 /**
  * Options.php
- * 
+ *
  * @package johnwatkins0/wp-snapshots
  */
 
@@ -15,7 +15,7 @@ use Carbon_Fields\Helper\Helper;
  * Sets up the plugin options page.
  */
 class Options {
-	const PRIMARY_COLOR_KEY = Plugin::FILTER_NAMESPACE . 'primary-color';
+	const PRIMARY_COLOR_KEY   = Plugin::FILTER_NAMESPACE . 'primary-color';
 	const SECONDARY_COLOR_KEY = Plugin::FILTER_NAMESPACE . 'secondary-color';
 
 	/**
@@ -68,12 +68,12 @@ class Options {
 	public static function get( string $key ) {
 		static $cache;
 		$cache = $cache ?: [];
-		
+
 		if ( isset( $cache[ $key ] ) ) {
 			return $cache[ $key ];
 		}
-		
-		$value = Helper::get_theme_option( $key ) ?: '';
+
+		$value         = Helper::get_theme_option( $key ) ?: '';
 		$cache[ $key ] = $value;
 		return $value;
 	}

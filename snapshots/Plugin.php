@@ -214,13 +214,13 @@ class Plugin {
 			return;
 		}
 
-		$primary = esc_html( Options::get( Options::PRIMARY_COLOR_KEY ) );
+		$primary   = esc_html( Options::get( Options::PRIMARY_COLOR_KEY ) );
 		$secondary = esc_html( Options::get( Options::SECONDARY_COLOR_KEY ) );
-		$css = ':root {
+		$css       = ':root {
 			--' . self::TEXT_DOMAIN . "-primary: $primary;
 			--" . self::TEXT_DOMAIN . "-secondary: $secondary;
 		}";
-		
+
 		wp_add_inline_style( self::TEXT_DOMAIN, $css );
 	}
 
@@ -240,8 +240,9 @@ class Plugin {
 						'single',
 						'single-' . self::POST_TYPE,
 						'archive',
-						'tax-' . self::TAXONOMY
-					]
+						'tax-' . self::TAXONOMY,
+					],
+					true
 				)
 				&& strpos( $class, 'term' ) !== 0
 				&& strpos( $class, self::POST_TYPE ) !== 0
