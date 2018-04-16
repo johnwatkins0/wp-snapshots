@@ -65,7 +65,7 @@ class Options {
 	 * @param string $key The option key.
 	 * @return mixed The value.
 	 */
-	public static function get( string $key ) {
+	public static function get( $key ) {
 		static $cache;
 		$cache = $cache ?: [];
 
