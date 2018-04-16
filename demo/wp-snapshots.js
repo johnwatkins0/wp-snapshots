@@ -17369,193 +17369,6 @@ module.exports = function (module) {
 
 /***/ }),
 
-/***/ "./src/js/App.js":
-/*!***********************!*\
-  !*** ./src/js/App.js ***!
-  \***********************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _react = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-
-var _react2 = _interopRequireDefault(_react);
-
-var _propTypes = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
-
-var _propTypes2 = _interopRequireDefault(_propTypes);
-
-var _reactRouterDom = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/es/index.js");
-
-var _reactDocumentTitle = __webpack_require__(/*! react-document-title */ "./node_modules/react-document-title/index.js");
-
-var _reactDocumentTitle2 = _interopRequireDefault(_reactDocumentTitle);
-
-var _lodash = __webpack_require__(/*! lodash.get */ "./node_modules/lodash.get/index.js");
-
-var _lodash2 = _interopRequireDefault(_lodash);
-
-var _Archive = __webpack_require__(/*! ./Archive */ "./src/js/Archive/index.js");
-
-var _Archive2 = _interopRequireDefault(_Archive);
-
-var _Single = __webpack_require__(/*! ./Single */ "./src/js/Single/index.js");
-
-var _Single2 = _interopRequireDefault(_Single);
-
-var _MiniNav = __webpack_require__(/*! ./MiniNav */ "./src/js/MiniNav/index.js");
-
-var _MiniNav2 = _interopRequireDefault(_MiniNav);
-
-var _actions = __webpack_require__(/*! ./store/actions */ "./src/js/store/actions.js");
-
-var _effects = __webpack_require__(/*! ./store/effects */ "./src/js/store/effects.js");
-
-var _effects2 = _interopRequireDefault(_effects);
-
-var _reducer = __webpack_require__(/*! ./store/reducer */ "./src/js/store/reducer.js");
-
-var _reducer2 = _interopRequireDefault(_reducer);
-
-var _selectors = __webpack_require__(/*! ./store/selectors */ "./src/js/store/selectors.js");
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-var INITIAL_STATE = {
-  posts: []
-};
-
-var App = function (_React$Component) {
-  _inherits(App, _React$Component);
-
-  function App(props) {
-    _classCallCheck(this, App);
-
-    var _this = _possibleConstructorReturn(this, (App.__proto__ || Object.getPrototypeOf(App)).call(this, props));
-
-    _this.getState = function () {
-      return _extends({}, _this.state);
-    };
-
-    _this.render = function () {
-      return _react2.default.createElement(
-        _reactRouterDom.BrowserRouter,
-        { basename: _this.props.basenamePrefix },
-        _react2.default.createElement(
-          'main',
-          { className: 'SnapshotsMain' },
-          _react2.default.createElement(
-            _reactRouterDom.Switch,
-            null,
-            _react2.default.createElement(_reactRouterDom.Route, {
-              path: '/snapshots/:name/',
-              render: function render() {
-                return _react2.default.createElement(
-                  _reactDocumentTitle2.default,
-                  { title: _this.props.termName },
-                  _react2.default.createElement(_Archive2.default, {
-                    posts: (0, _selectors.getPosts)(_this.state),
-                    termName: _this.props.termName,
-                    termDescription: _this.props.termDescription
-                  })
-                );
-              }
-            }),
-            _react2.default.createElement(_reactRouterDom.Route, {
-              path: '/snapshot/:slug/',
-              render: function render(_ref) {
-                var slug = _ref.match.params.slug;
-
-                var post = (0, _selectors.getPostBySlug)(_this.state, slug);
-                return _react2.default.createElement(
-                  _reactDocumentTitle2.default,
-                  { title: (0, _lodash2.default)(post, ['title', 'rendered'], document.title) },
-                  _react2.default.createElement(
-                    'div',
-                    null,
-                    _react2.default.createElement(_Single2.default, post),
-                    _react2.default.createElement(_MiniNav2.default, {
-                      posts: (0, _selectors.getPosts)(_this.state),
-                      termName: _this.props.termName,
-                      termSlug: _this.props.termSlug
-                    })
-                  )
-                );
-              }
-            })
-          )
-        )
-      );
-    };
-
-    _this.state = INITIAL_STATE;
-    _this.dispatch = _this.dispatch.bind(_this);
-    _this.triggerEffect = _this.triggerEffect.bind(_this);
-    _this.getState = _this.getState.bind(_this);
-    return _this;
-  }
-
-  _createClass(App, [{
-    key: 'componentDidMount',
-    value: function componentDidMount() {
-      this.dispatch((0, _actions.appDidMount)(this.props.termId));
-    }
-  }, {
-    key: 'dispatch',
-    value: function dispatch(action) {
-      var _this2 = this;
-
-      this.setState(function (state) {
-        return (0, _reducer2.default)(state, action);
-      }, function () {
-        return _this2.triggerEffect(action);
-      });
-    }
-  }, {
-    key: 'triggerEffect',
-    value: function triggerEffect(action) {
-      if (action.type in _effects2.default) {
-        _effects2.default[action.type](action, {
-          dispatch: this.dispatch,
-          getState: this.getState
-        });
-      }
-    }
-  }]);
-
-  return App;
-}(_react2.default.Component);
-
-App.propTypes = {
-  termId: _propTypes2.default.string.isRequired,
-  termName: _propTypes2.default.string.isRequired,
-  termSlug: _propTypes2.default.string.isRequired,
-  termDescription: _propTypes2.default.string.isRequired,
-  basenamePrefix: _propTypes2.default.string
-};
-App.defaultProps = {
-  basenamePrefix: ''
-};
-exports.default = App;
-
-/***/ }),
-
 /***/ "./src/js/Archive/Archive.js":
 /*!***********************************!*\
   !*** ./src/js/Archive/Archive.js ***!
@@ -18025,11 +17838,15 @@ var TAXONOMY = exports.TAXONOMY = 'snapshot-category';
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.start = exports.startApp = undefined;
+exports.start = exports.startApp = exports.App = undefined;
 
 var _regenerator = __webpack_require__(/*! babel-runtime/regenerator */ "./node_modules/babel-runtime/regenerator/index.js");
 
 var _regenerator2 = _interopRequireDefault(_regenerator);
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 var _react = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 
@@ -18039,11 +17856,47 @@ var _reactDom = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/i
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
-var _App = __webpack_require__(/*! ./App */ "./src/js/App.js");
+var _propTypes = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
 
-var _App2 = _interopRequireDefault(_App);
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+var _reactRouterDom = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/es/index.js");
+
+var _reactDocumentTitle = __webpack_require__(/*! react-document-title */ "./node_modules/react-document-title/index.js");
+
+var _reactDocumentTitle2 = _interopRequireDefault(_reactDocumentTitle);
+
+var _lodash = __webpack_require__(/*! lodash.get */ "./node_modules/lodash.get/index.js");
+
+var _lodash2 = _interopRequireDefault(_lodash);
+
+var _Archive = __webpack_require__(/*! ./Archive */ "./src/js/Archive/index.js");
+
+var _Archive2 = _interopRequireDefault(_Archive);
+
+var _Single = __webpack_require__(/*! ./Single */ "./src/js/Single/index.js");
+
+var _Single2 = _interopRequireDefault(_Single);
+
+var _MiniNav = __webpack_require__(/*! ./MiniNav */ "./src/js/MiniNav/index.js");
+
+var _MiniNav2 = _interopRequireDefault(_MiniNav);
+
+var _actions = __webpack_require__(/*! ./store/actions */ "./src/js/store/actions.js");
+
+var _effects = __webpack_require__(/*! ./store/effects */ "./src/js/store/effects.js");
+
+var _effects2 = _interopRequireDefault(_effects);
+
+var _reducer = __webpack_require__(/*! ./store/reducer */ "./src/js/store/reducer.js");
+
+var _reducer2 = _interopRequireDefault(_reducer);
+
+var _selectors = __webpack_require__(/*! ./store/selectors */ "./src/js/store/selectors.js");
 
 var _constants = __webpack_require__(/*! ./constants */ "./src/js/constants.js");
+
+var _withScrollToTop = __webpack_require__(/*! ./utils/withScrollToTop */ "./src/js/utils/withScrollToTop.js");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -18051,9 +17904,133 @@ function _asyncToGenerator(fn) { return function () { var gen = fn.apply(this, a
 
 function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
 
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var ScrollToTopSingle = (0, _withScrollToTop.withScrollToTop)(_Single2.default);
+var ScrollToTopArchive = (0, _withScrollToTop.withScrollToTop)(_Archive2.default);
+
+var INITIAL_STATE = {
+  posts: []
+};
+
+var App = exports.App = function (_React$Component) {
+  _inherits(App, _React$Component);
+
+  function App(props) {
+    _classCallCheck(this, App);
+
+    var _this = _possibleConstructorReturn(this, (App.__proto__ || Object.getPrototypeOf(App)).call(this, props));
+
+    _this.getState = function () {
+      return _extends({}, _this.state);
+    };
+
+    _this.render = function () {
+      return _react2.default.createElement(
+        _reactRouterDom.BrowserRouter,
+        { basename: _this.props.basenamePrefix },
+        _react2.default.createElement(
+          'main',
+          { className: 'SnapshotsMain' },
+          _react2.default.createElement(
+            _reactRouterDom.Switch,
+            null,
+            _react2.default.createElement(_reactRouterDom.Route, {
+              path: '/snapshots/:name/',
+              render: function render() {
+                return _react2.default.createElement(
+                  _reactDocumentTitle2.default,
+                  { title: _this.props.termName },
+                  _react2.default.createElement(ScrollToTopArchive, {
+                    posts: (0, _selectors.getPosts)(_this.state),
+                    termName: _this.props.termName,
+                    termDescription: _this.props.termDescription
+                  })
+                );
+              }
+            }),
+            _react2.default.createElement(_reactRouterDom.Route, {
+              path: '/snapshot/:slug/',
+              render: function render(_ref) {
+                var slug = _ref.match.params.slug;
+
+                var post = (0, _selectors.getPostBySlug)(_this.state, slug);
+                return _react2.default.createElement(
+                  _reactDocumentTitle2.default,
+                  { title: (0, _lodash2.default)(post, ['title', 'rendered'], document.title) },
+                  _react2.default.createElement(
+                    'div',
+                    null,
+                    post && post.image && _react2.default.createElement(ScrollToTopSingle, post),
+                    _react2.default.createElement(_MiniNav2.default, {
+                      posts: (0, _selectors.getPosts)(_this.state),
+                      termName: _this.props.termName,
+                      termSlug: _this.props.termSlug
+                    })
+                  )
+                );
+              }
+            })
+          )
+        )
+      );
+    };
+
+    _this.state = INITIAL_STATE;
+    _this.dispatch = _this.dispatch.bind(_this);
+    _this.triggerEffect = _this.triggerEffect.bind(_this);
+    _this.getState = _this.getState.bind(_this);
+    return _this;
+  }
+
+  _createClass(App, [{
+    key: 'componentDidMount',
+    value: function componentDidMount() {
+      this.dispatch((0, _actions.appDidMount)(this.props.termId));
+    }
+  }, {
+    key: 'dispatch',
+    value: function dispatch(action) {
+      var _this2 = this;
+
+      this.setState(function (state) {
+        return (0, _reducer2.default)(state, action);
+      }, function () {
+        return _this2.triggerEffect(action);
+      });
+    }
+  }, {
+    key: 'triggerEffect',
+    value: function triggerEffect(action) {
+      if (action.type in _effects2.default) {
+        _effects2.default[action.type](action, {
+          dispatch: this.dispatch,
+          getState: this.getState
+        });
+      }
+    }
+  }]);
+
+  return App;
+}(_react2.default.Component);
+
+App.propTypes = {
+  termId: _propTypes2.default.string.isRequired,
+  termName: _propTypes2.default.string.isRequired,
+  termSlug: _propTypes2.default.string.isRequired,
+  termDescription: _propTypes2.default.string.isRequired,
+  basenamePrefix: _propTypes2.default.string
+};
+App.defaultProps = {
+  basenamePrefix: ''
+};
 var startApp = exports.startApp = function startApp() {
   [].concat(_toConsumableArray(document.querySelectorAll(_constants.ROOT_SELECTOR))).forEach(function (root) {
-    _reactDom2.default.render(_react2.default.createElement(_App2.default, {
+    _reactDom2.default.render(_react2.default.createElement(App, {
       termName: root.getAttribute('data-term-name'),
       termId: root.getAttribute('data-term-id'),
       termSlug: root.getAttribute('data-term-slug'),
@@ -18064,7 +18041,7 @@ var startApp = exports.startApp = function startApp() {
 };
 
 var start = exports.start = function () {
-  var _ref = _asyncToGenerator( /*#__PURE__*/_regenerator2.default.mark(function _callee() {
+  var _ref2 = _asyncToGenerator( /*#__PURE__*/_regenerator2.default.mark(function _callee() {
     return _regenerator2.default.wrap(function _callee$(_context) {
       while (1) {
         switch (_context.prev = _context.next) {
@@ -18090,7 +18067,7 @@ var start = exports.start = function () {
   }));
 
   return function start() {
-    return _ref.apply(this, arguments);
+    return _ref2.apply(this, arguments);
   };
 }();
 
@@ -18625,6 +18602,74 @@ var sourceUrlGenerator = exports.sourceUrlGenerator = function sourceUrlGenerato
 
     return url;
   };
+};
+
+/***/ }),
+
+/***/ "./src/js/utils/withScrollToTop.js":
+/*!*****************************************!*\
+  !*** ./src/js/utils/withScrollToTop.js ***!
+  \*****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.withScrollToTop = undefined;
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+/**
+ * Returns a higher-order component that scrolls the window to the top on mount.
+ *
+ * @param {React.Component} Component A React Component.
+ * @return {React.Component} The modified component.
+ */
+var withScrollToTop = exports.withScrollToTop = function withScrollToTop(Component) {
+  return function (_React$Component) {
+    _inherits(ScrollToTop, _React$Component);
+
+    function ScrollToTop() {
+      var _ref;
+
+      var _temp, _this, _ret;
+
+      _classCallCheck(this, ScrollToTop);
+
+      for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+        args[_key] = arguments[_key];
+      }
+
+      return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = ScrollToTop.__proto__ || Object.getPrototypeOf(ScrollToTop)).call.apply(_ref, [this].concat(args))), _this), _this.render = function () {
+        return _react2.default.createElement(Component, _this.props);
+      }, _temp), _possibleConstructorReturn(_this, _ret);
+    }
+
+    _createClass(ScrollToTop, [{
+      key: 'componentDidMount',
+      value: function componentDidMount() {
+        window.scrollTo(0, 0);
+      }
+    }]);
+
+    return ScrollToTop;
+  }(_react2.default.Component);
 };
 
 /***/ }),
