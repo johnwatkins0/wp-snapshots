@@ -18052,46 +18052,29 @@ function _asyncToGenerator(fn) { return function () { var gen = fn.apply(this, a
 function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
 
 var startApp = exports.startApp = function startApp() {
-  [].concat(_toConsumableArray(document.querySelectorAll(_constants.ROOT_SELECTOR))).forEach(function () {
-    var _ref = _asyncToGenerator( /*#__PURE__*/_regenerator2.default.mark(function _callee(root) {
-      return _regenerator2.default.wrap(function _callee$(_context) {
-        while (1) {
-          switch (_context.prev = _context.next) {
-            case 0:
-              _reactDom2.default.render(_react2.default.createElement(_App2.default, {
-                termName: root.getAttribute('data-term-name'),
-                termId: root.getAttribute('data-term-id'),
-                termSlug: root.getAttribute('data-term-slug'),
-                termDescription: root.getAttribute('data-term-description'),
-                basenamePrefix: root.getAttribute('data-basename-prefix') || ''
-              }), root);
-
-            case 1:
-            case 'end':
-              return _context.stop();
-          }
-        }
-      }, _callee, undefined);
-    }));
-
-    return function (_x) {
-      return _ref.apply(this, arguments);
-    };
-  }());
+  [].concat(_toConsumableArray(document.querySelectorAll(_constants.ROOT_SELECTOR))).forEach(function (root) {
+    _reactDom2.default.render(_react2.default.createElement(_App2.default, {
+      termName: root.getAttribute('data-term-name'),
+      termId: root.getAttribute('data-term-id'),
+      termSlug: root.getAttribute('data-term-slug'),
+      termDescription: root.getAttribute('data-term-description'),
+      basenamePrefix: root.getAttribute('data-basename-prefix') || ''
+    }), root);
+  });
 };
 
 var start = exports.start = function () {
-  var _ref2 = _asyncToGenerator( /*#__PURE__*/_regenerator2.default.mark(function _callee2() {
-    return _regenerator2.default.wrap(function _callee2$(_context2) {
+  var _ref = _asyncToGenerator( /*#__PURE__*/_regenerator2.default.mark(function _callee() {
+    return _regenerator2.default.wrap(function _callee$(_context) {
       while (1) {
-        switch (_context2.prev = _context2.next) {
+        switch (_context.prev = _context.next) {
           case 0:
             if ('fetch' in window) {
-              _context2.next = 3;
+              _context.next = 3;
               break;
             }
 
-            _context2.next = 3;
+            _context.next = 3;
             return __webpack_require__.e(/*! import() */ 0).then(function() { var module = __webpack_require__(/*! whatwg-fetch */ "./node_modules/whatwg-fetch/fetch.js"); return typeof module === "object" && module && module.__esModule ? module : Object.assign({/* fake namespace object */}, typeof module === "object" && module, { "default": module }); });
 
           case 3:
@@ -18100,14 +18083,14 @@ var start = exports.start = function () {
 
           case 4:
           case 'end':
-            return _context2.stop();
+            return _context.stop();
         }
       }
-    }, _callee2, undefined);
+    }, _callee, undefined);
   }));
 
   return function start() {
-    return _ref2.apply(this, arguments);
+    return _ref.apply(this, arguments);
   };
 }();
 

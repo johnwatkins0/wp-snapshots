@@ -127,18 +127,6 @@ class Plugin {
 			self::VERSION,
 			true
 		);
-
-		wp_register_style(
-			self::TEXT_DOMAIN . '-editor',
-			$dist . self::TEXT_DOMAIN . "-editor$min.css",
-			[ 'wp-edit-blocks' ]
-		);
-
-		wp_register_script(
-			self::TEXT_DOMAIN . '-editor',
-			$dist . self::TEXT_DOMAIN . "-editor$min.js",
-			[ 'wp-blocks', 'wp-element' ]
-		);
 	}
 
 	/**

@@ -5,7 +5,7 @@ import App from './App';
 import { ROOT_SELECTOR } from './constants';
 
 export const startApp = () => {
-  [...document.querySelectorAll(ROOT_SELECTOR)].forEach(async (root) => {
+  [...document.querySelectorAll(ROOT_SELECTOR)].forEach((root) => {
     ReactDOM.render(
       <App
         termName={root.getAttribute('data-term-name')}
