@@ -1,0 +1,158 @@
+@-webkit-keyframes fadeIn {
+
+	from {
+		opacity: 0;
+		-webkit-transform: translate3d(0, 1rem, 0);
+		        transform: translate3d(0, 1rem, 0);
+	}
+
+	to {
+		opacity: 1;
+		-webkit-transform: translate3d(0, 0, 0);
+		        transform: translate3d(0, 0, 0);
+	}
+}
+
+@keyframes fadeIn {
+
+	from {
+		opacity: 0;
+		-webkit-transform: translate3d(0, 1rem, 0);
+		        transform: translate3d(0, 1rem, 0);
+	}
+
+	to {
+		opacity: 1;
+		-webkit-transform: translate3d(0, 0, 0);
+		        transform: translate3d(0, 0, 0);
+	}
+}
+
+.SnapshotsArchive {
+	padding: 1.5rem;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+	grid-gap: 1.5rem;
+}
+
+.SnapshotsArchive__intro {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+}
+
+.SnapshotsArchive__title {
+	margin-top: 0;
+	margin-bottom: 0.5rem;
+}
+
+.SnapshotsArchive__description {
+	margin: 0;
+	color: #888;
+	font-weight: 600;
+	font-size: 1.122rem;
+	line-height: 1.414;
+}
+
+.SnapshotsArchive__social {
+	padding: 1.5rem 0 0;
+}
+
+.SnapshotsArchive__social svg {
+	margin-right: 0.75rem;
+}
+
+.SnapshotsNavLink {
+	position: relative;
+	margin-bottom: 0.75rem;
+	padding-bottom: 0;
+	height: 225px;
+	border-radius: 3px;
+	overflow: hidden;
+
+	-webkit-perspective: 1000px;
+
+	        perspective: 1000px;
+}
+
+@supports ((-webkit-animation-fill-mode: both) or (animation-fill-mode: both)) {
+
+	.SnapshotsNavLink {
+		-webkit-animation-name: fadeIn;
+		        animation-name: fadeIn;
+		-webkit-animation-duration: 1s;
+		        animation-duration: 1s;
+		-webkit-animation-fill-mode: both;
+		        animation-fill-mode: both;
+	}
+}
+
+.SnapshotsNavLink__inner {
+	position: relative;
+	display: block;
+	width: 100%;
+	height: 100%;
+	background-color: transparent;
+	-webkit-transition: -webkit-transform 0.6s;
+	transition: -webkit-transform 0.6s;
+	transition: transform 0.6s;
+	transition: transform 0.6s, -webkit-transform 0.6s;
+	-webkit-transform-style: preserve-3d;
+	        transform-style: preserve-3d;
+}
+
+.SnapshotsNavLink:hover .SnapshotsNavLink__inner {
+	-webkit-transform: rotateX(180deg) rotateY(0deg);
+	        transform: rotateX(180deg) rotateY(0deg);
+}
+
+.SnapshotsNavLink__front,
+.SnapshotsNavLink__back {
+	position: absolute;
+	display: block;
+	margin: 0;
+	width: 100%;
+	height: 100%;
+	opacity: 0.99;
+
+	-webkit-backface-visibility: hidden;
+
+	        backface-visibility: hidden;
+}
+
+.SnapshotsNavLink__front {
+	background-size: cover;
+	background-position: center;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	-webkit-box-align: end;
+	    -ms-flex-align: end;
+	        align-items: flex-end;
+}
+
+.SnapshotsNavLink__back {
+	padding: 1.5rem 1.5rem 1rem;
+	background: var(--wp-snapshots-secondary);
+	-webkit-transform: rotateX(180deg) rotateY(0deg);
+	        transform: rotateX(180deg) rotateY(0deg);
+}
+
+.SnapshotsNavLink__title {
+	margin-bottom: 0;
+	padding-bottom: 1rem;
+	color: #fff;
+	text-shadow: 0 0 6px #222;
+}
+
+/*# sourceMappingURL=wp-snapshots.css.map*/

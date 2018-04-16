@@ -1,0 +1,149 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MiniNav renders 1`] = `
+<nav
+  className="MiniNav"
+>
+  <h2>
+    <a
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": "Name",
+        }
+      }
+      href="/snapshots/name/"
+      onClick={[Function]}
+    />
+  </h2>
+  <div
+    className="MiniNav__grid"
+  >
+    <a
+      aria-current={false}
+      className="MiniNavLink"
+      href="/snapshot/donec-vel-volutpat/"
+      onClick={[Function]}
+      style={
+        Object {
+          "backgroundImage": "url('[object Object]')",
+        }
+      }
+    >
+      <img
+        alt="Donec vel volutpat"
+        height={200}
+        src="/demo/src/images/300x200-7.jpg"
+        width={300}
+      />
+    </a>
+    <a
+      aria-current={false}
+      className="MiniNavLink"
+      href="/snapshot/donec-ut-eros/"
+      onClick={[Function]}
+      style={
+        Object {
+          "backgroundImage": "url('[object Object]')",
+        }
+      }
+    >
+      <img
+        alt="Donec ut eros"
+        height={200}
+        src="/demo/src/images/300x200-6.jpg"
+        width={300}
+      />
+    </a>
+    <a
+      aria-current={false}
+      className="MiniNavLink"
+      href="/snapshot/vivamus-ullamcorper/"
+      onClick={[Function]}
+      style={
+        Object {
+          "backgroundImage": "url('[object Object]')",
+        }
+      }
+    >
+      <img
+        alt="Vivamus ullamcorper"
+        height={200}
+        src="/demo/src/images/300x200-5.jpg"
+        width={300}
+      />
+    </a>
+    <a
+      aria-current={false}
+      className="MiniNavLink"
+      href="/snapshot/vestibulum-dapibus/"
+      onClick={[Function]}
+      style={
+        Object {
+          "backgroundImage": "url('[object Object]')",
+        }
+      }
+    >
+      <img
+        alt="Vestibulum dapibus"
+        height={200}
+        src="/demo/src/images/300x200-4.jpg"
+        width={300}
+      />
+    </a>
+    <a
+      aria-current={false}
+      className="MiniNavLink"
+      href="/snapshot/ut-eget-orci/"
+      onClick={[Function]}
+      style={
+        Object {
+          "backgroundImage": "url('[object Object]')",
+        }
+      }
+    >
+      <img
+        alt="Ut eget orci"
+        height={200}
+        src="/demo/src/images/300x200-3.jpg"
+        width={300}
+      />
+    </a>
+    <a
+      aria-current={false}
+      className="MiniNavLink"
+      href="/snapshot/praesent-sollicitudin/"
+      onClick={[Function]}
+      style={
+        Object {
+          "backgroundImage": "url('[object Object]')",
+        }
+      }
+    >
+      <img
+        alt="Praesent sollicitudin"
+        height={200}
+        src="/demo/src/images/300x200-2.jpg"
+        width={300}
+      />
+    </a>
+    <a
+      aria-current={false}
+      className="MiniNavLink"
+      href="/snapshot/nullam-ultricies/"
+      onClick={[Function]}
+      style={
+        Object {
+          "backgroundImage": "url('[object Object]')",
+        }
+      }
+    >
+      <img
+        alt="Nullam ultricies"
+        height={200}
+        src="/demo/src/images/300x200-1.jpg"
+        width={300}
+      />
+    </a>
+  </div>
+</nav>
+`;

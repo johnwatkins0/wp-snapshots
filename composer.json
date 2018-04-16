@@ -1,0 +1,38 @@
+{
+  "name": "johnwatkins0/wp-snapshots",
+  "description": "A WordPress plugin providing a post type and display feature for images of notable people with text fields.",
+  "type": "library",
+  "scripts": {
+    "phpcbf": "phpcbf --extensions=php",
+    "lint": "phpcs --extensions=php -s",
+    "test": "./vendor/bin/phpunit"
+  },
+  "authors": [
+    {
+      "name": "John Watkins",
+      "email": "johnwatkins0@gmail.com"
+    }
+  ],
+  "config": {
+    "platform": {
+      "php": "7.1"
+    }
+  },
+  "minimum-stability": "stable",
+  "require-dev": {
+    "squizlabs/php_codesniffer": "*",
+    "wp-coding-standards/wpcs": "dev-master",
+    "phpunit/phpunit": "^7.1"
+  },
+  "autoload": {
+    "psr-4": {
+      "JohnWatkins\\Snapshots\\": "snapshots/"
+    },
+    "files": [
+      "wp-snapshots.php"
+    ]
+  },
+  "require": {
+    "htmlburger/carbon-fields": "^2.2"
+  }
+}

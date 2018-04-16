@@ -1,0 +1,31 @@
+.SnapshotsSingle {
+	width: 100%;
+	max-width: 768px;
+	margin: 0 auto;
+}
+
+.SnapshotsSingle__image {
+	width: 100%;
+	height: auto;
+}
+
+.SnapshotsSingle__header {
+	position: relative;
+	margin-left: -1.5rem;
+	margin-right: -1.5rem;
+}
+
+.SnapshotsSingle__title-container {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	display: flex;
+	align-items: flex-end;
+	padding: 0 1.5rem;
+}
+
+.SnapshotsSingle__title {
+	color: #fff;
+}

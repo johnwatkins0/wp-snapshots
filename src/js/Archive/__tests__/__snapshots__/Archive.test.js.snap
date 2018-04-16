@@ -1,0 +1,378 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Archive renders 1`] = `
+<nav
+  className="SnapshotsArchive"
+>
+  <div
+    className="SnapshotsArchive__intro"
+  >
+    <h1
+      className="SnapshotsArchive__title"
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": "Name",
+        }
+      }
+    />
+    <p
+      className="SnapshotsArchive__description"
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": "Description",
+        }
+      }
+    />
+    <div
+      className="SnapshotsArchive__social"
+    >
+      <a
+        href="https://www.facebook.com/sharer/sharer.php?u=about:blank"
+        target="_blank"
+      >
+        <svg
+          height="24px"
+          viewBox="0 0 1792 1792"
+          width="24px"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <title>
+            Facebook
+          </title>
+          <path
+            d="M1376 128q119 0 203.5 84.5t84.5 203.5v960q0 119-84.5 203.5t-203.5 84.5h-188v-595h199l30-232h-229v-148q0-56 23.5-84t91.5-28l122-1v-207q-63-9-178-9-136 0-217.5 80t-81.5 226v171h-200v232h200v595h-532q-119 0-203.5-84.5t-84.5-203.5v-960q0-119 84.5-203.5t203.5-84.5h960z"
+            fill="currentColor"
+          />
+        </svg>
+      </a>
+      <a
+        href="https://twitter.com/intent/tweet?url=about:blank&text=Description"
+        target="_blank"
+      >
+        <svg
+          height="24px"
+          viewBox="0 0 1792 1792"
+          width="24px"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <title>
+            Twitter
+          </title>
+          <path
+            d="M1684 408q-67 98-162 167 1 14 1 42 0 130-38 259.5t-115.5 248.5-184.5 210.5-258 146-323 54.5q-271 0-496-145 35 4 78 4 225 0 401-138-105-2-188-64.5t-114-159.5q33 5 61 5 43 0 85-11-112-23-185.5-111.5t-73.5-205.5v-4q68 38 146 41-66-44-105-115t-39-154q0-88 44-163 121 149 294.5 238.5t371.5 99.5q-8-38-8-74 0-134 94.5-228.5t228.5-94.5q140 0 236 102 109-21 205-78-37 115-142 178 93-10 186-50z"
+            fill="currentColor"
+          />
+        </svg>
+      </a>
+    </div>
+  </div>
+  <div
+    className="SnapshotsNavLink"
+    style={
+      Object {
+        "animationDelay": ".0s",
+      }
+    }
+  >
+    <a
+      className="SnapshotsNavLink__inner"
+      href="/snapshot/donec-vel-volutpat/"
+      onClick={[Function]}
+    >
+      <div
+        className="SnapshotsNavLink__front"
+        style={
+          Object {
+            "backgroundImage": "url('/demo/src/images/1024x683-7.jpg')",
+          }
+        }
+      >
+        <h2
+          className="SnapshotsNavLink__title"
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "Donec vel volutpat",
+            }
+          }
+        />
+      </div>
+      <div
+        className="SnapshotsNavLink__back"
+      >
+        <p
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "<p>Nunc quis libero</p>
+",
+            }
+          }
+        />
+      </div>
+    </a>
+  </div>
+  <div
+    className="SnapshotsNavLink"
+    style={
+      Object {
+        "animationDelay": ".1s",
+      }
+    }
+  >
+    <a
+      className="SnapshotsNavLink__inner"
+      href="/snapshot/donec-ut-eros/"
+      onClick={[Function]}
+    >
+      <div
+        className="SnapshotsNavLink__front"
+        style={
+          Object {
+            "backgroundImage": "url('/demo/src/images/1024x683-6.jpg')",
+          }
+        }
+      >
+        <h2
+          className="SnapshotsNavLink__title"
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "Donec ut eros",
+            }
+          }
+        />
+      </div>
+      <div
+        className="SnapshotsNavLink__back"
+      >
+        <p
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "<p>Phasellus orci magna</p>
+",
+            }
+          }
+        />
+      </div>
+    </a>
+  </div>
+  <div
+    className="SnapshotsNavLink"
+    style={
+      Object {
+        "animationDelay": ".2s",
+      }
+    }
+  >
+    <a
+      className="SnapshotsNavLink__inner"
+      href="/snapshot/vivamus-ullamcorper/"
+      onClick={[Function]}
+    >
+      <div
+        className="SnapshotsNavLink__front"
+        style={
+          Object {
+            "backgroundImage": "url('/demo/src/images/1024x683-5.jpg')",
+          }
+        }
+      >
+        <h2
+          className="SnapshotsNavLink__title"
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "Vivamus ullamcorper",
+            }
+          }
+        />
+      </div>
+      <div
+        className="SnapshotsNavLink__back"
+      >
+        <p
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "<p>Nulla facilisis</p>
+",
+            }
+          }
+        />
+      </div>
+    </a>
+  </div>
+  <div
+    className="SnapshotsNavLink"
+    style={
+      Object {
+        "animationDelay": ".3s",
+      }
+    }
+  >
+    <a
+      className="SnapshotsNavLink__inner"
+      href="/snapshot/vestibulum-dapibus/"
+      onClick={[Function]}
+    >
+      <div
+        className="SnapshotsNavLink__front"
+        style={
+          Object {
+            "backgroundImage": "url('/demo/src/images/1024x683-4.jpg')",
+          }
+        }
+      >
+        <h2
+          className="SnapshotsNavLink__title"
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "Vestibulum dapibus",
+            }
+          }
+        />
+      </div>
+      <div
+        className="SnapshotsNavLink__back"
+      >
+        <p
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "<p>Nam gravida malesuada</p>
+",
+            }
+          }
+        />
+      </div>
+    </a>
+  </div>
+  <div
+    className="SnapshotsNavLink"
+    style={
+      Object {
+        "animationDelay": ".4s",
+      }
+    }
+  >
+    <a
+      className="SnapshotsNavLink__inner"
+      href="/snapshot/ut-eget-orci/"
+      onClick={[Function]}
+    >
+      <div
+        className="SnapshotsNavLink__front"
+        style={
+          Object {
+            "backgroundImage": "url('/demo/src/images/1024x683-3.jpg')",
+          }
+        }
+      >
+        <h2
+          className="SnapshotsNavLink__title"
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "Ut eget orci",
+            }
+          }
+        />
+      </div>
+      <div
+        className="SnapshotsNavLink__back"
+      >
+        <p
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "<p>Integer cursus </p>
+",
+            }
+          }
+        />
+      </div>
+    </a>
+  </div>
+  <div
+    className="SnapshotsNavLink"
+    style={
+      Object {
+        "animationDelay": ".5s",
+      }
+    }
+  >
+    <a
+      className="SnapshotsNavLink__inner"
+      href="/snapshot/praesent-sollicitudin/"
+      onClick={[Function]}
+    >
+      <div
+        className="SnapshotsNavLink__front"
+        style={
+          Object {
+            "backgroundImage": "url('/demo/src/images/1024x683-2.jpg')",
+          }
+        }
+      >
+        <h2
+          className="SnapshotsNavLink__title"
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "Praesent sollicitudin",
+            }
+          }
+        />
+      </div>
+      <div
+        className="SnapshotsNavLink__back"
+      >
+        <p
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "<p>Curabitur mauris urna</p>
+",
+            }
+          }
+        />
+      </div>
+    </a>
+  </div>
+  <div
+    className="SnapshotsNavLink"
+    style={
+      Object {
+        "animationDelay": ".6s",
+      }
+    }
+  >
+    <a
+      className="SnapshotsNavLink__inner"
+      href="/snapshot/nullam-ultricies/"
+      onClick={[Function]}
+    >
+      <div
+        className="SnapshotsNavLink__front"
+        style={
+          Object {
+            "backgroundImage": "url('/demo/src/images/1024x683-1.jpg')",
+          }
+        }
+      >
+        <h2
+          className="SnapshotsNavLink__title"
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "Nullam ultricies",
+            }
+          }
+        />
+      </div>
+      <div
+        className="SnapshotsNavLink__back"
+      >
+        <p
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "<p>Sed at efficitur</p>
+",
+            }
+          }
+        />
+      </div>
+    </a>
+  </div>
+</nav>
+`;

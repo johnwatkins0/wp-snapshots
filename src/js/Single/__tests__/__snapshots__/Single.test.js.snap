@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Single renders 1`] = `
+<article
+  className="SnapshotsSingle"
+>
+  <header
+    className="SnapshotsSingle__header"
+  >
+    <div
+      className="SnapshotsSingle__title-container"
+    >
+      <h1
+        className="SnapshotsSingle__title"
+        dangerouslySetInnerHTML={
+          Object {
+            "__html": "Donec vel volutpat",
+          }
+        }
+      />
+    </div>
+    <img
+      alt="Donec vel volutpat"
+      className="SnapshotsSingle__image"
+      height={683}
+      src="/demo/src/images/1024x683-7.jpg"
+      width={1024}
+    />
+  </header>
+  <div
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "<section><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quis libero at sapien tempus semper. Mauris quis ante velit. Donec vel volutpat sapien, eu efficitur mi. Etiam lacinia finibus erat, a porttitor massa auctor ut. Duis mauris nunc, sagittis non lobortis sed, volutpat quis dui. In accumsan blandit vestibulum. Aliquam erat volutpat.</p>
+</section>",
+      }
+    }
+  />
+</article>
+`;
