@@ -44,7 +44,6 @@ export const withReplaceEditLink = (OriginalComponent, type) =>
       }
 
       if (type === 'category') {
-        console.log(this.props);
         editLink.setAttribute(
           'href',
           `${this.props.basename}/wp-admin/term.php?taxonomy=snapshot-category&tag_ID=${

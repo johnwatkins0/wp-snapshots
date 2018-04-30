@@ -4,3 +4,4 @@ vendor
 coverage
 .vscode
 dist
+.deploy-servers.js
