@@ -6,12 +6,11 @@ module.exports = {
   rules: {
     'import/prefer-default-export': 0,
     'react/jsx-filename-extension': 0,
+    'react/react-in-jsx-scope': 0
   },
   globals: {
+    wp: true,
     wpApiSettings: true,
-    testPosts: true,
-    testMedia: true,
-    testState: true,
-    testPostsWithMedia: true,
+    lodash: true
   },
 };

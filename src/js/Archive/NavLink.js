@@ -2,7 +2,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
-import get from 'lodash.get';
+import get from 'lodash/get';
 
 const getLargeOrMediumImageUrl = imageSizes =>
   get(imageSizes, ['large', 'source_url'], get(imageSizes, ['medium', 'source_url'], ''));

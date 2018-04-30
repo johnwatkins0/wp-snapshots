@@ -1,8 +1,8 @@
 .SnapshotsArchive {
 	padding: 1.5rem;
 	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
-	grid-gap: 1.5rem;
+	grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+	grid-gap: 1.125rem;
 }
 
 .SnapshotsArchive__intro {
@@ -21,7 +21,7 @@
 	color: #888;
 	font-weight: 600;
 	font-size: 1.122rem;
-	line-height: 1.414;
+	line-height: 1.5;
 }
 
 .SnapshotsArchive__social {
@@ -29,5 +29,8 @@
 }
 
 .SnapshotsArchive__social svg {
+	color: var(--wp-snapshots-primary);
 	margin-right: 0.75rem;
+	height: 1.875rem;
+	width: 1.875rem;
 }

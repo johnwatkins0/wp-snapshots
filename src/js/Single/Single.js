@@ -2,9 +2,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import { Facebook, Twitter } from '../svg';
+
 const Single = ({
   title: { rendered: title },
   content: { rendered: content },
+  excerpt: { rendered: excerpt },
   image: {
     media_details: {
       sizes: { large: image },
@@ -25,12 +28,28 @@ const Single = ({
       />
     </header>
     <div dangerouslySetInnerHTML={{ __html: content }} />
+    <footer className="SnapshotsSingle__share-band">
+      <h2>Share</h2>
+      <a
+        target="_blank"
+        href={`https://www.facebook.com/sharer/sharer.php?u=${window.location.href}`}
+      >
+        <Facebook />
+      </a>
+      <a
+        target="_blank"
+        href={`https://twitter.com/intent/tweet?url=${window.location.href}&text=${excerpt}`}
+      >
+        <Twitter />
+      </a>
+    </footer>
   </article>
 );
 
 Single.propTypes = {
   title: PropTypes.objectOf(PropTypes.any),
   content: PropTypes.objectOf(PropTypes.any),
+  excerpt: PropTypes.objectOf(PropTypes.any),
   image: PropTypes.objectOf(PropTypes.any).isRequired,
 };
 
@@ -39,6 +58,9 @@ Single.defaultProps = {
     rendered: '',
   },
   content: {
+    rendered: '',
+  },
+  excerpt: {
     rendered: '',
   },
 };

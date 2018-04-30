@@ -1,5 +1,5 @@
-import find from 'lodash.find';
-import get from 'lodash.get';
+import find from 'lodash/find';
+import get from 'lodash/get';
 
 /**
  * Gets all posts out of the store.

@@ -53,13 +53,12 @@
 }
 
 .SnapshotsNavLink__back {
-	padding: 1.5rem 1.5rem 1rem;
 	background: var(--wp-snapshots-secondary);
 	transform: rotateX(180deg) rotateY(0deg);
 	position: relative;
 }
 
-.SnapshotsNavLink__back p {
+.SnapshotsNavLink__back > p {
 	position: absolute;
 	top: 0;
 	right: 0;
@@ -69,6 +68,7 @@
 	align-items: center;
 	justify-content: center;
 	color: #fff;
+	padding: 1.5rem;
 }
 
 .SnapshotsNavLink__title {

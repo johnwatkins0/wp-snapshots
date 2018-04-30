@@ -1,7 +1,8 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+/* eslint react/no-danger: 0 */
+import React, { Component } from 'react';
+import { render } from 'react-dom';
 import PropTypes from 'prop-types';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { BrowserRouter, Route, Switch, Link } from 'react-router-dom';
 import DocumentTitle from 'react-document-title';
 import get from 'lodash.get';
 
@@ -16,15 +17,16 @@ import { getPostBySlug, getPosts } from './store/selectors';
 
 import { ROOT_SELECTOR } from './constants';
 import { withScrollToTop } from './utils/withScrollToTop';
+import { withReplaceEditLink } from './utils/withReplaceEditLink';
 
-const ScrollToTopSingle = withScrollToTop(Single);
-const ScrollToTopArchive = withScrollToTop(Archive);
+const ScrollToTopSingle = withScrollToTop(withReplaceEditLink(Single, 'post'));
+const ScrollToTopArchive = withScrollToTop(withReplaceEditLink(Archive, 'category'));
 
 const INITIAL_STATE = {
   posts: [],
 };
 
-export class App extends React.Component {
+export class App extends Component {
   static propTypes = {
     termId: PropTypes.string.isRequired,
     termName: PropTypes.string.isRequired,
@@ -77,6 +79,8 @@ export class App extends React.Component {
                   posts={getPosts(this.state)}
                   termName={this.props.termName}
                   termDescription={this.props.termDescription}
+                  basename={this.props.basenamePrefix}
+                  id={Number(this.props.termId)}
                 />
               </DocumentTitle>
             )}
@@ -93,7 +97,19 @@ export class App extends React.Component {
               return (
                 <DocumentTitle title={get(post, ['title', 'rendered'], document.title)}>
                   <div>
-                    {post && post.image && <ScrollToTopSingle {...post} />}
+                    <div className="SnapshotsMain__title-container">
+                      <h1>
+                        <Link
+                          href={`/snapshots/${this.props.termSlug}/`}
+                          to={`/snapshots/${this.props.termSlug}/`}
+                          dangerouslySetInnerHTML={{ __html: this.props.termName }}
+                        />
+                      </h1>
+                    </div>
+                    {post &&
+                      post.image && (
+                        <ScrollToTopSingle {...post} basename={this.props.basenamePrefix} />
+                      )}
                     <MiniNav
                       posts={getPosts(this.state)}
                       termName={this.props.termName}
@@ -112,13 +128,13 @@ export class App extends React.Component {
 
 export const startApp = () => {
   [...document.querySelectorAll(ROOT_SELECTOR)].forEach((root) => {
-    ReactDOM.render(
+    render(
       <App
         termName={root.getAttribute('data-term-name')}
         termId={root.getAttribute('data-term-id')}
         termSlug={root.getAttribute('data-term-slug')}
         termDescription={root.getAttribute('data-term-description')}
-        basenamePrefix={root.getAttribute('data-basename-prefix') || ''}
+        basenamePrefix={root.getAttribute('data-basename-prefix').replace(/\/$/, '') || ''}
       />,
       root,
     );

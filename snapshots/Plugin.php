@@ -30,8 +30,9 @@ class Plugin {
 	/**
 	 * Initiates the plugin.
 	 */
-	public function __construct() {
-		new Options();
+	public static function init() {
+		$options = new Options();
+		$options->init();
 		add_action( 'init', [ __CLASS__, 'register_post_type' ] );
 		add_action( 'init', [ __CLASS__, 'register_taxonomy' ] );
 		add_action( 'template_redirect', [ __CLASS__, 'maybe_block_assets' ] );
@@ -123,7 +124,7 @@ class Plugin {
 		wp_register_script(
 			self::TEXT_DOMAIN,
 			$dist . self::TEXT_DOMAIN . "$min.js",
-			[ 'wp-api-request' ],
+			[ 'wp-api' ],
 			self::VERSION,
 			true
 		);
@@ -256,6 +257,7 @@ class Plugin {
 		$props .= 'data-term-name="' . esc_attr( $category->name ) . '"';
 		$props .= 'data-term-slug="' . esc_attr( $category->slug ) . '"';
 		$props .= 'data-term-description="' . esc_attr( $category->description ) . '"';
+		$props .= 'data-basename-prefix="' . esc_attr( is_multisite() ? get_blog_details()->path : '/' ) . '"';
 
 		return '<div
 			data-' . self::TEXT_DOMAIN . '

@@ -1,6 +1,6 @@
 {
   "name": "johnwatkins0/wp-snapshots",
-  "description": "A WordPress plugin providing a post type and display feature for images of notable people with text fields.",
+  "description": "A WordPress plugin providing a post type and display feature for images of notable people (or scenes) with text fields.",
   "type": "library",
   "scripts": {
     "phpcbf": "phpcbf --extensions=php",

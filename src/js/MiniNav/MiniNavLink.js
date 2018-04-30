@@ -17,7 +17,6 @@ const MiniNavLink = ({
     href={`/snapshot/${slug}/`}
     className="MiniNavLink"
     activeClassName="MiniNavLink--current"
-    style={{ backgroundImage: `url('${image}')` }}
   >
     <img src={image.source_url} height={image.height} width={image.width} alt={title} />
   </NavLink>

@@ -1,4 +1,4 @@
-import find from 'lodash.find';
+import find from 'lodash/find';
 
 export const addImagesToPosts = (posts, media) =>
   posts.map(post => ({

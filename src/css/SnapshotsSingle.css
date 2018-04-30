@@ -11,8 +11,7 @@
 
 .SnapshotsSingle__header {
 	position: relative;
-	margin-left: -1.5rem;
-	margin-right: -1.5rem;
+	margin-bottom: 1.5rem;
 }
 
 .SnapshotsSingle__title-container {
@@ -28,4 +27,53 @@
 
 .SnapshotsSingle__title {
 	color: #fff;
+}
+
+.SnapshotsSingle__share-band {
+	position: relative;
+	text-align: center;
+	padding: 1.5rem;
+	margin-top: 1.5rem;
+	margin-bottom: 1.5rem;
+}
+
+@supports (pointer-events: none) {
+
+	.SnapshotsSingle__share-band::after {
+		position: absolute;
+		top: 0;
+		right: -1000%;
+		bottom: 0;
+		left: -1000%;
+		background-color: var(--wp-snapshots-primary);
+		pointer-events: none;
+		content: "";
+		z-index: -1;
+	}
+
+	.SnapshotsSingle__share-band a {
+		color: #fff;
+		transition: all 0.2s;
+	}
+
+	.SnapshotsSingle__share-band a:hover {
+		color: #fff;
+		transform: scale(1.07);
+		opacity: 0.8;
+	}
+
+	.SnapshotsSingle__share-band h2 {
+		color: #fff;
+	}
+}
+
+.SnapshotsSingle__share-band h2 {
+	text-transform: uppercase;
+	font-size: 100%;
+}
+
+.SnapshotsSingle__share-band svg {
+	height: 1.875rem;
+	width: 1.875rem;
+	margin: 0 0.5rem;
 }

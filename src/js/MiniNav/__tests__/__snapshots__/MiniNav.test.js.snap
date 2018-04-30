@@ -23,11 +23,7 @@ exports[`MiniNav renders 1`] = `
       className="MiniNavLink"
       href="/snapshot/donec-vel-volutpat/"
       onClick={[Function]}
-      style={
-        Object {
-          "backgroundImage": "url('[object Object]')",
-        }
-      }
+      style={undefined}
     >
       <img
         alt="Donec vel volutpat"
@@ -41,11 +37,7 @@ exports[`MiniNav renders 1`] = `
       className="MiniNavLink"
       href="/snapshot/donec-ut-eros/"
       onClick={[Function]}
-      style={
-        Object {
-          "backgroundImage": "url('[object Object]')",
-        }
-      }
+      style={undefined}
     >
       <img
         alt="Donec ut eros"
@@ -59,11 +51,7 @@ exports[`MiniNav renders 1`] = `
       className="MiniNavLink"
       href="/snapshot/vivamus-ullamcorper/"
       onClick={[Function]}
-      style={
-        Object {
-          "backgroundImage": "url('[object Object]')",
-        }
-      }
+      style={undefined}
     >
       <img
         alt="Vivamus ullamcorper"
@@ -77,11 +65,7 @@ exports[`MiniNav renders 1`] = `
       className="MiniNavLink"
       href="/snapshot/vestibulum-dapibus/"
       onClick={[Function]}
-      style={
-        Object {
-          "backgroundImage": "url('[object Object]')",
-        }
-      }
+      style={undefined}
     >
       <img
         alt="Vestibulum dapibus"
@@ -95,11 +79,7 @@ exports[`MiniNav renders 1`] = `
       className="MiniNavLink"
       href="/snapshot/ut-eget-orci/"
       onClick={[Function]}
-      style={
-        Object {
-          "backgroundImage": "url('[object Object]')",
-        }
-      }
+      style={undefined}
     >
       <img
         alt="Ut eget orci"
@@ -113,11 +93,7 @@ exports[`MiniNav renders 1`] = `
       className="MiniNavLink"
       href="/snapshot/praesent-sollicitudin/"
       onClick={[Function]}
-      style={
-        Object {
-          "backgroundImage": "url('[object Object]')",
-        }
-      }
+      style={undefined}
     >
       <img
         alt="Praesent sollicitudin"
@@ -131,11 +107,7 @@ exports[`MiniNav renders 1`] = `
       className="MiniNavLink"
       href="/snapshot/nullam-ultricies/"
       onClick={[Function]}
-      style={
-        Object {
-          "backgroundImage": "url('[object Object]')",
-        }
-      }
+      style={undefined}
     >
       <img
         alt="Nullam ultricies"

@@ -14,9 +14,13 @@ if ( ! defined( 'ABSPATH' ) ) {
 	return;
 }
 
-if ( ! file_exists( __DIR__ . '/vendor/autoload.php' ) ) {
+if ( defined( 'WP_SNAPSHOTS' ) ) {
 	return;
 }
 
-require __DIR__ . '/vendor/autoload.php';
-new JohnWatkins\Snapshots\Plugin();
+define( 'WP_SNAPSHOTS', true );
+
+if ( file_exists( __DIR__ . '/vendor/autoload.php' ) ) {
+	require __DIR__ . '/vendor/autoload.php';
+	JohnWatkins\Snapshots\Plugin::init();
+}
