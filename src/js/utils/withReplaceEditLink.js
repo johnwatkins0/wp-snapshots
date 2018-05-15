@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 /**
- * Returns a higher-order component that scrolls the window to the top on mount.
+ * Returns a higher-order component that replaces "Edit" links in the WP admin bar.
  *
  * @param {React.Component} Component A React Component.
  * @return {React.Component} The modified component.

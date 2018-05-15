@@ -18,6 +18,7 @@ if ( defined( 'WP_SNAPSHOTS' ) ) {
 	return;
 }
 
+define( 'Carbon_Fields\\URL', plugin_dir_url( __FILE__ ) . '/vendor/htmlburger/carbon-fields/' );
 define( 'WP_SNAPSHOTS', true );
 
 if ( file_exists( __DIR__ . '/vendor/autoload.php' ) ) {

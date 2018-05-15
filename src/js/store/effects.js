@@ -28,7 +28,6 @@ const effects = {
     }
 
     const updatedPosts = addImagesToPosts(posts, media);
-
     dispatch(updatePosts(updatedPosts));
   },
 };
