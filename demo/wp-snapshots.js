@@ -29123,7 +29123,7 @@ var effects = {
         while (1) {
           switch (_context2.prev = _context2.next) {
             case 0:
-              url = (0, _getRootUrl.getRootUrl)() + 'wp/v2/media/?include=' + (0, _getMediaIdsFromPosts.getMediaIdsFromPosts)(posts) + '&_fields=id,media_details';
+              url = (0, _getRootUrl.getRootUrl)() + 'wp/v2/media/?per_page=99&include=' + (0, _getMediaIdsFromPosts.getMediaIdsFromPosts)(posts) + '&_fields=id,media_details';
               media = sessionStorage.getItem(url);
 
               if (!media) {
@@ -29151,7 +29151,6 @@ var effects = {
 
             case 13:
               updatedPosts = (0, _addImagesToPosts.addImagesToPosts)(posts, media);
-
 
               dispatch((0, _actions.updatePosts)(updatedPosts));
 
@@ -29574,7 +29573,7 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 /**
- * Returns a higher-order component that scrolls the window to the top on mount.
+ * Returns a higher-order component that replaces "Edit" links in the WP admin bar.
  *
  * @param {React.Component} Component A React Component.
  * @return {React.Component} The modified component.

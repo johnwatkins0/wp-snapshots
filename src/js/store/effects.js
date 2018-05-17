@@ -11,13 +11,14 @@ const effects = {
     const params = `${TAXONOMY}=${
       action.termId
     }&per_page=99&_fields=id,title,slug,excerpt,content,featured_media,snapshot-category`;
+
     const response = await fetch(`${url}?${params}`);
     const posts = await response.json();
     dispatch(receivePosts(posts));
   },
 
   RECEIVE_POSTS: async ({ posts }, { dispatch }) => {
-    const url = `${getRootUrl()}wp/v2/media/?include=${getMediaIdsFromPosts(posts)}&_fields=id,media_details`;
+    const url = `${getRootUrl()}wp/v2/media/?per_page=99&include=${getMediaIdsFromPosts(posts)}&_fields=id,media_details`;
     let media = sessionStorage.getItem(url);
     if (media) {
       media = JSON.parse(media);
