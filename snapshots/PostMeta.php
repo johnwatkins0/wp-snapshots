@@ -62,10 +62,12 @@ class PostMeta {
 	 * Gets an option.
 	 *
 	 * @param string $key The option key.
+	 * @param int    $post_id A post .
 	 * @return mixed The value.
 	 */
 	public static function get( $key, $post_id = null ) {
 		static $cache = [];
+
 		$post_id = null !== $post_id ? $post_id : get_the_ID();
 
 		if ( ! isset( $cache[ $key ] ) ) {
