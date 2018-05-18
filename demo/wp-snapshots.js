@@ -28625,6 +28625,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 var Single = function Single(_ref) {
   var title = _ref.title.rendered,
+      extraImage = _ref['johnwatkins__wp-snapshots__image'],
       content = _ref.content.rendered,
       excerpt = _ref.excerpt.rendered,
       image = _ref.image.media_details.sizes.large;
@@ -28640,9 +28641,9 @@ var Single = function Single(_ref) {
         _react2.default.createElement('h1', { className: 'SnapshotsSingle__title', dangerouslySetInnerHTML: { __html: title } })
       ),
       _react2.default.createElement('img', {
-        src: image.source_url,
-        width: image.width,
-        height: image.height,
+        src: extraImage || image.source_url,
+        width: extraImage ? '' : image.width,
+        height: extraImage ? '' : image.height,
         alt: title,
         className: 'SnapshotsSingle__image'
       })
@@ -28681,7 +28682,8 @@ Single.propTypes = {
   title: _propTypes2.default.objectOf(_propTypes2.default.any),
   content: _propTypes2.default.objectOf(_propTypes2.default.any),
   excerpt: _propTypes2.default.objectOf(_propTypes2.default.any),
-  image: _propTypes2.default.objectOf(_propTypes2.default.any).isRequired
+  image: _propTypes2.default.objectOf(_propTypes2.default.any).isRequired,
+  'johnwatkins__wp-snapshots__image': _propTypes2.default.string
 };
 
 Single.defaultProps = {
@@ -28693,7 +28695,8 @@ Single.defaultProps = {
   },
   excerpt: {
     rendered: ''
-  }
+  },
+  'johnwatkins__wp-snapshots__image': ''
 };
 
 exports.default = Single;
@@ -29087,7 +29090,7 @@ var effects = {
           switch (_context.prev = _context.next) {
             case 0:
               url = '' + (0, _getRootUrl.getRootUrl)() + _constants.REST_PATH;
-              params = _constants.TAXONOMY + '=' + action.termId + '&per_page=99&_fields=id,title,slug,excerpt,content,featured_media,snapshot-category';
+              params = _constants.TAXONOMY + '=' + action.termId + '&per_page=99&_fields=id,title,slug,excerpt,content,featured_media,snapshot-category,johnwatkins__wp-snapshots__image\n    ';
               _context.next = 4;
               return fetch(url + '?' + params);
 

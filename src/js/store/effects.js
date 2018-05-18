@@ -10,7 +10,8 @@ const effects = {
     const url = `${getRootUrl()}${REST_PATH}`;
     const params = `${TAXONOMY}=${
       action.termId
-    }&per_page=99&_fields=id,title,slug,excerpt,content,featured_media,snapshot-category`;
+    }&per_page=99&_fields=id,title,slug,excerpt,content,featured_media,snapshot-category,johnwatkins__wp-snapshots__image
+    `;
 
     const response = await fetch(`${url}?${params}`);
     const posts = await response.json();

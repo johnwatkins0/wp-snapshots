@@ -33,6 +33,8 @@ class Plugin {
 	public static function init() {
 		$options = new Options();
 		$options->init();
+		$post_meta = new PostMeta();
+		$post_meta->init();
 		add_action( 'init', [ __CLASS__, 'register_post_type' ] );
 		add_action( 'init', [ __CLASS__, 'register_taxonomy' ] );
 		add_action( 'template_redirect', [ __CLASS__, 'maybe_block_assets' ] );

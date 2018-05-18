@@ -6,6 +6,7 @@ import { Facebook, Twitter } from '../svg';
 
 const Single = ({
   title: { rendered: title },
+  'johnwatkins__wp-snapshots__image': extraImage,
   content: { rendered: content },
   excerpt: { rendered: excerpt },
   image: {
@@ -20,9 +21,9 @@ const Single = ({
         <h1 className="SnapshotsSingle__title" dangerouslySetInnerHTML={{ __html: title }} />
       </div>
       <img
-        src={image.source_url}
-        width={image.width}
-        height={image.height}
+        src={extraImage || image.source_url}
+        width={extraImage ? '' : image.width}
+        height={extraImage ? '' : image.height}
         alt={title}
         className="SnapshotsSingle__image"
       />
@@ -51,6 +52,7 @@ Single.propTypes = {
   content: PropTypes.objectOf(PropTypes.any),
   excerpt: PropTypes.objectOf(PropTypes.any),
   image: PropTypes.objectOf(PropTypes.any).isRequired,
+  'johnwatkins__wp-snapshots__image': PropTypes.string,
 };
 
 Single.defaultProps = {
@@ -63,6 +65,7 @@ Single.defaultProps = {
   excerpt: {
     rendered: '',
   },
+  'johnwatkins__wp-snapshots__image': '',
 };
 
 export default Single;
