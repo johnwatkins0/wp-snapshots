@@ -12,7 +12,7 @@ namespace JohnWatkins\Snapshots;
  */
 class Plugin {
 	const PROD             = false;
-	const VERSION          = '0.0.1';
+	const VERSION          = '0.0.2';
 	const VENDOR           = 'johnwatkins';
 	const TEXT_DOMAIN      = 'wp-snapshots';
 	const FILTER_NAMESPACE = self::VENDOR . '__' . self::TEXT_DOMAIN . '__';
