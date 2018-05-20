@@ -5,7 +5,16 @@
  * @package johnwatkins0/wp-snapshots
  */
 
-use JohnWatkins\Snapshots\{Utils, Plugin};
+use JohnWatkins\Snapshots\{Utils, Plugin, Options};
+
+add_action( 'wp_head', function() {
+    $require_login = Options::get( Options::LOGIN_KEY );
+
+    if ( true === $require_login ) {
+        auth_redirect();
+    }
+    
+} );
 
 get_header();
 

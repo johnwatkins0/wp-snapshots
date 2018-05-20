@@ -88,14 +88,17 @@ export class App extends Component {
 
           <Route
             path="/snapshot/:slug/"
-            render={({
+            component={({
               match: {
                 params: { slug },
               },
             }) => {
               const post = getPostBySlug(this.state, slug);
               return (
-                <DocumentTitle title={get(post, ['title', 'rendered'], document.title)}>
+                <DocumentTitle
+                  key={get(post, 'id', '')}
+                  title={get(post, ['title', 'rendered'], document.title)}
+                >
                   <div>
                     <div className="SnapshotsMain__title-container">
                       <h1>

@@ -28611,6 +28611,8 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
 var _react = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 
 var _react2 = _interopRequireDefault(_react);
@@ -28619,64 +28621,115 @@ var _propTypes = __webpack_require__(/*! prop-types */ "./node_modules/prop-type
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
 
+var _get = __webpack_require__(/*! lodash/get */ "./node_modules/lodash/get.js");
+
+var _get2 = _interopRequireDefault(_get);
+
 var _svg = __webpack_require__(/*! ../svg */ "./src/js/svg/index.js");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var Single = function Single(_ref) {
-  var title = _ref.title.rendered,
-      extraImage = _ref['johnwatkins__wp-snapshots__image'],
-      content = _ref.content.rendered,
-      excerpt = _ref.excerpt.rendered,
-      image = _ref.image.media_details.sizes.large;
-  return _react2.default.createElement(
-    'article',
-    { className: 'SnapshotsSingle' },
-    _react2.default.createElement(
-      'header',
-      { className: 'SnapshotsSingle__header' },
-      _react2.default.createElement(
-        'div',
-        { className: 'SnapshotsSingle__title-container' },
-        _react2.default.createElement('h1', { className: 'SnapshotsSingle__title', dangerouslySetInnerHTML: { __html: title } })
-      ),
-      _react2.default.createElement('img', {
-        src: extraImage || image.source_url,
-        width: extraImage ? '' : image.width,
-        height: extraImage ? '' : image.height,
-        alt: title,
-        className: 'SnapshotsSingle__image'
-      })
-    ),
-    _react2.default.createElement('div', { dangerouslySetInnerHTML: { __html: content } }),
-    _react2.default.createElement(
-      'footer',
-      { className: 'SnapshotsSingle__share-band' },
-      _react2.default.createElement(
-        'h2',
-        null,
-        'Share'
-      ),
-      _react2.default.createElement(
-        'a',
-        {
-          target: '_blank',
-          href: 'https://www.facebook.com/sharer/sharer.php?u=' + window.location.href
-        },
-        _react2.default.createElement(_svg.Facebook, null)
-      ),
-      _react2.default.createElement(
-        'a',
-        {
-          target: '_blank',
-          href: 'https://twitter.com/intent/tweet?url=' + window.location.href + '&text=' + excerpt
-        },
-        _react2.default.createElement(_svg.Twitter, null)
-      )
-    )
-  );
-}; /* eslint react/no-danger: 0 */
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /* eslint react/no-danger: 0 */
+
+
+var Single = function (_React$Component) {
+  _inherits(Single, _React$Component);
+
+  function Single(props) {
+    _classCallCheck(this, Single);
+
+    var _this = _possibleConstructorReturn(this, (Single.__proto__ || Object.getPrototypeOf(Single)).call(this, props));
+
+    _this.render = function () {
+      var _ref = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : _this.props,
+          title = _ref.title.rendered,
+          content = _ref.content.rendered,
+          excerpt = _ref.excerpt.rendered;
+
+      return _react2.default.createElement(
+        'article',
+        { className: 'SnapshotsSingle' },
+        _react2.default.createElement(
+          'header',
+          { className: 'SnapshotsSingle__header' },
+          _react2.default.createElement(
+            'div',
+            { className: 'SnapshotsSingle__title-container' },
+            _react2.default.createElement('h1', { className: 'SnapshotsSingle__title', dangerouslySetInnerHTML: { __html: title } })
+          ),
+          _react2.default.createElement('img', { src: _this.state.image, alt: title, className: 'SnapshotsSingle__image' })
+        ),
+        _react2.default.createElement('div', { dangerouslySetInnerHTML: { __html: content } }),
+        _react2.default.createElement(
+          'footer',
+          { className: 'SnapshotsSingle__share-band' },
+          _react2.default.createElement(
+            'h2',
+            null,
+            'Share'
+          ),
+          _react2.default.createElement(
+            'a',
+            {
+              target: '_blank',
+              href: 'https://www.facebook.com/sharer/sharer.php?u=' + window.location.href
+            },
+            _react2.default.createElement(_svg.Facebook, null)
+          ),
+          _react2.default.createElement(
+            'a',
+            {
+              target: '_blank',
+              href: 'https://twitter.com/intent/tweet?url=' + window.location.href + '&text=' + excerpt
+            },
+            _react2.default.createElement(_svg.Twitter, null)
+          )
+        )
+      );
+    };
+
+    _this.state = {
+      image: ''
+    };
+    return _this;
+  }
+
+  _createClass(Single, [{
+    key: 'componentDidMount',
+    value: function componentDidMount() {
+      this.setImage();
+    }
+  }, {
+    key: 'componentDidUpdate',
+    value: function componentDidUpdate() {
+      if (this.state.image === '') {
+        this.setImage();
+      }
+    }
+  }, {
+    key: 'setImage',
+    value: function setImage() {
+      var image = '';
+
+      if (this.props['johnwatkins__wp-snapshots__image']) {
+        this.setState({ image: this.props['johnwatkins__wp-snapshots__image'] });
+        return;
+      }
+
+      image = (0, _get2.default)(this, ['props', 'image', 'media_details', 'sizes', 'large', 'source_url'], '');
+
+      if (image !== '') {
+        this.setState({ image: image });
+      }
+    }
+  }]);
+
+  return Single;
+}(_react2.default.Component);
 
 Single.propTypes = {
   title: _propTypes2.default.objectOf(_propTypes2.default.any),
@@ -28879,13 +28932,16 @@ var App = exports.App = function (_Component) {
             }),
             _react2.default.createElement(_reactRouterDom.Route, {
               path: '/snapshot/:slug/',
-              render: function render(_ref) {
+              component: function component(_ref) {
                 var slug = _ref.match.params.slug;
 
                 var post = (0, _selectors.getPostBySlug)(_this.state, slug);
                 return _react2.default.createElement(
                   _reactDocumentTitle2.default,
-                  { title: (0, _lodash2.default)(post, ['title', 'rendered'], document.title) },
+                  {
+                    key: (0, _lodash2.default)(post, 'id', ''),
+                    title: (0, _lodash2.default)(post, ['title', 'rendered'], document.title)
+                  },
                   _react2.default.createElement(
                     'div',
                     null,
