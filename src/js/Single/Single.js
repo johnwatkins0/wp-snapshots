@@ -39,36 +39,40 @@ class Single extends React.Component {
     }
   }
 
-  render = ({
-    title: { rendered: title },
-    content: { rendered: content },
-    excerpt: { rendered: excerpt },
-  } = this.props) => (
-    <article className="SnapshotsSingle">
-      <header className="SnapshotsSingle__header">
-        <div className="SnapshotsSingle__title-container">
-          <h1 className="SnapshotsSingle__title" dangerouslySetInnerHTML={{ __html: title }} />
-        </div>
-        <img src={this.state.image} alt={title} className="SnapshotsSingle__image" />
-      </header>
-      <div dangerouslySetInnerHTML={{ __html: content }} />
-      <footer className="SnapshotsSingle__share-band">
-        <h2>Share</h2>
-        <a
-          target="_blank"
-          href={`https://www.facebook.com/sharer/sharer.php?u=${window.location.href}`}
-        >
-          <Facebook />
-        </a>
-        <a
-          target="_blank"
-          href={`https://twitter.com/intent/tweet?url=${window.location.href}&text=${excerpt}`}
-        >
-          <Twitter />
-        </a>
-      </footer>
-    </article>
-  );
+  render = () => {
+    const {
+      title: { rendered: title },
+      content: { rendered: content },
+      excerpt: { rendered: excerpt },
+    } = this.props;
+
+    return (
+      <article className="SnapshotsSingle">
+        <header className="SnapshotsSingle__header">
+          <div className="SnapshotsSingle__title-container">
+            <h1 className="SnapshotsSingle__title" dangerouslySetInnerHTML={{ __html: title }} />
+          </div>
+          <img src={this.state.image} alt={title} className="SnapshotsSingle__image" />
+        </header>
+        <div dangerouslySetInnerHTML={{ __html: content }} />
+        <footer className="SnapshotsSingle__share-band">
+          <h2>Share</h2>
+          <a
+            target="_blank"
+            href={`https://www.facebook.com/sharer/sharer.php?u=${window.location.href}`}
+          >
+            <Facebook />
+          </a>
+          <a
+            target="_blank"
+            href={`https://twitter.com/intent/tweet?url=${window.location.href}&text=${excerpt}`}
+          >
+            <Twitter />
+          </a>
+        </footer>
+      </article>
+    );
+  };
 }
 
 Single.propTypes = {

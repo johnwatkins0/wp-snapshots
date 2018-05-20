@@ -22,9 +22,7 @@ exports[`Single renders 1`] = `
     <img
       alt="Donec vel volutpat"
       className="SnapshotsSingle__image"
-      height={683}
       src="/demo/src/images/1024x683-7.jpg"
-      width={1024}
     />
   </header>
   <div

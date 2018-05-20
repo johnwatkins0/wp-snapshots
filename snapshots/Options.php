@@ -17,7 +17,7 @@ use Carbon_Fields\Helper\Helper;
 class Options {
 	const PRIMARY_COLOR_KEY   = Plugin::FILTER_NAMESPACE . 'primary-color';
 	const SECONDARY_COLOR_KEY = Plugin::FILTER_NAMESPACE . 'secondary-color';
-	const LOGIN_KEY = Plugin::FILTER_NAMESPACE . 'login_key';
+	const LOGIN_KEY           = Plugin::FILTER_NAMESPACE . 'login_key';
 
 	/**
 	 * Adds hooks.
@@ -54,7 +54,7 @@ class Options {
 				->set_default_value( '#ffa100' ),
 
 			Field::make( 'checkbox', self::LOGIN_KEY, 'Require login.' )
-				->set_help_text( 'Should viewing this feature require login?' )
+				->set_help_text( 'Should viewing this feature require login?' ),
 		];
 	}
 
