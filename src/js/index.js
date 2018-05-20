@@ -33,10 +33,12 @@ export class App extends Component {
     termSlug: PropTypes.string.isRequired,
     termDescription: PropTypes.string.isRequired,
     basenamePrefix: PropTypes.string,
+    titleAppend: PropTypes.string,
   };
 
   static defaultProps = {
     basenamePrefix: '',
+    titleAppend: '',
   };
 
   constructor(props) {
@@ -74,7 +76,7 @@ export class App extends Component {
           <Route
             path="/snapshots/:name/"
             render={() => (
-              <DocumentTitle title={this.props.termName}>
+              <DocumentTitle title={this.props.termName + this.props.titleAppend}>
                 <ScrollToTopArchive
                   posts={getPosts(this.state)}
                   termName={this.props.termName}
@@ -97,7 +99,7 @@ export class App extends Component {
               return (
                 <DocumentTitle
                   key={get(post, 'id', '')}
-                  title={get(post, ['title', 'rendered'], document.title)}
+                  title={get(post, ['title', 'rendered'], document.title) + this.props.titleAppend}
                 >
                   <div>
                     <div className="SnapshotsMain__title-container">
@@ -134,6 +136,7 @@ export const startApp = () => {
     render(
       <App
         termName={root.getAttribute('data-term-name')}
+        titleAppend={root.getAttribute('data-title-append')}
         termId={root.getAttribute('data-term-id')}
         termSlug={root.getAttribute('data-term-slug')}
         termDescription={root.getAttribute('data-term-description')}

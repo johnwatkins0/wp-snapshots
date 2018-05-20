@@ -28645,10 +28645,11 @@ var Single = function (_React$Component) {
     var _this = _possibleConstructorReturn(this, (Single.__proto__ || Object.getPrototypeOf(Single)).call(this, props));
 
     _this.render = function () {
-      var _ref = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : _this.props,
-          title = _ref.title.rendered,
-          content = _ref.content.rendered,
-          excerpt = _ref.excerpt.rendered;
+      var _this$props = _this.props,
+          title = _this$props.title.rendered,
+          content = _this$props.content.rendered,
+          excerpt = _this$props.excerpt.rendered;
+
 
       return _react2.default.createElement(
         'article',
@@ -28919,7 +28920,7 @@ var App = exports.App = function (_Component) {
               render: function render() {
                 return _react2.default.createElement(
                   _reactDocumentTitle2.default,
-                  { title: _this.props.termName },
+                  { title: _this.props.termName + _this.props.titleAppend },
                   _react2.default.createElement(ScrollToTopArchive, {
                     posts: (0, _selectors.getPosts)(_this.state),
                     termName: _this.props.termName,
@@ -28940,7 +28941,7 @@ var App = exports.App = function (_Component) {
                   _reactDocumentTitle2.default,
                   {
                     key: (0, _lodash2.default)(post, 'id', ''),
-                    title: (0, _lodash2.default)(post, ['title', 'rendered'], document.title)
+                    title: (0, _lodash2.default)(post, ['title', 'rendered'], document.title) + _this.props.titleAppend
                   },
                   _react2.default.createElement(
                     'div',
@@ -29016,15 +29017,18 @@ App.propTypes = {
   termName: _propTypes2.default.string.isRequired,
   termSlug: _propTypes2.default.string.isRequired,
   termDescription: _propTypes2.default.string.isRequired,
-  basenamePrefix: _propTypes2.default.string
+  basenamePrefix: _propTypes2.default.string,
+  titleAppend: _propTypes2.default.string
 };
 App.defaultProps = {
-  basenamePrefix: ''
+  basenamePrefix: '',
+  titleAppend: ''
 };
 var startApp = exports.startApp = function startApp() {
   [].concat(_toConsumableArray(document.querySelectorAll(_constants.ROOT_SELECTOR))).forEach(function (root) {
     (0, _reactDom.render)(_react2.default.createElement(App, {
       termName: root.getAttribute('data-term-name'),
+      titleAppend: root.getAttribute('data-title-append'),
       termId: root.getAttribute('data-term-id'),
       termSlug: root.getAttribute('data-term-slug'),
       termDescription: root.getAttribute('data-term-description'),

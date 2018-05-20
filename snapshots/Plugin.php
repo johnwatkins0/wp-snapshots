@@ -11,8 +11,8 @@ namespace JohnWatkins\Snapshots;
  * Performs plugin initialization.
  */
 class Plugin {
-	const PROD             = false;
-	const VERSION          = '0.0.3';
+	const PROD             = true;
+	const VERSION          = '0.0.4';
 	const VENDOR           = 'johnwatkins';
 	const TEXT_DOMAIN      = 'wp-snapshots';
 	const FILTER_NAMESPACE = self::VENDOR . '__' . self::TEXT_DOMAIN . '__';
@@ -263,6 +263,7 @@ class Plugin {
 
 		return '<div
 			data-' . self::TEXT_DOMAIN . '
+			data-title-append="' . ' | ' . esc_attr( get_bloginfo( 'name' ) ) . '"
 			data-root-url="' . esc_url( get_bloginfo( 'url' ) ) . "\"
 			$props
 			></div>";
