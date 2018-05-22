@@ -51,7 +51,7 @@ class Plugin {
 	 * Modifies the title if we're on a term archive.
 	 *
 	 * @param string $title The title.
-	 * @return 
+	 * @return string The filtered title.
 	 */
 	public static function fix_wp_title( $title ) {
 		if ( ! is_tax( self::TAXONOMY ) ) {
