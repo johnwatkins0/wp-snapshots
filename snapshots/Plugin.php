@@ -43,6 +43,48 @@ class Plugin {
 		add_action( 'template_include', [ __CLASS__, 'maybe_include_app_template' ] );
 		add_action( 'wp_enqueue_scripts', [ __CLASS__, 'render_css_custom_properties' ] );
 		add_filter( 'body_class', [ __CLASS__, 'normalize_body_class' ], 11 );
+		add_filter( 'wp_title', [ __CLASS__, 'fix_wp_title' ] );
+		add_filter( 'meta_description', [ __CLASS__, 'fix_meta_description' ] );
+	}
+
+	/**
+	 * Modifies the title if we're on a term archive.
+	 *
+	 * @param string $title The title.
+	 * @return 
+	 */
+	public static function fix_wp_title( $title ) {
+		if ( ! is_tax( self::TAXONOMY ) ) {
+			return $title;
+		}
+
+		$term = get_queried_object();
+
+		if ( empty( $term ) || ! is_object( $term ) || ! isset( $term->name ) ) {
+			return $title;
+		}
+
+		return $term->name . ' | ';
+	}
+
+	/**
+	 * Modifies the meta description if the filter exists.
+	 *
+	 * @param string $description The description.
+	 * @return string The filtered description.
+	 */
+	public static function fix_meta_description( $description ) {
+		if ( ! is_tax( self::TAXONOMY ) ) {
+			return $description;
+		}
+
+		$term = get_queried_object();
+
+		if ( empty( $term ) || ! is_object( $term ) || ! isset( $term->description ) ) {
+			return $description;
+		}
+
+		return $term->description;
 	}
 
 	/**
