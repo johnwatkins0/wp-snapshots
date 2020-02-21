@@ -12,7 +12,7 @@ namespace JohnWatkins\Snapshots;
  */
 class Plugin {
 	const PROD             = true;
-	const VERSION          = '0.0.4';
+	const VERSION          = '0.0.5';
 	const VENDOR           = 'johnwatkins';
 	const TEXT_DOMAIN      = 'wp-snapshots';
 	const FILTER_NAMESPACE = self::VENDOR . '__' . self::TEXT_DOMAIN . '__';
@@ -111,7 +111,8 @@ class Plugin {
 
 		if ( null === $is_doing_app ) {
 			$is_doing_app = is_singular( self::POST_TYPE )
-				|| is_tax( self::TAXONOMY );
+				|| is_tax( self::TAXONOMY )
+				|| is_preview() && self::POST_TYPE === get_post_type();
 		}
 
 		return $is_doing_app;
@@ -302,6 +303,16 @@ class Plugin {
 		$props .= 'data-term-slug="' . esc_attr( $category->slug ) . '"';
 		$props .= 'data-term-description="' . esc_attr( $category->description ) . '"';
 		$props .= 'data-basename-prefix="' . esc_attr( is_multisite() ? get_blog_details()->path : '/' ) . '"';
+
+		if ( 'true' === filter_input( INPUT_GET, 'preview', FILTER_SANITIZE_STRING ) ) {
+			$id = filter_input( INPUT_GET, 'p', FILTER_SANITIZE_NUMBER_INT );
+
+			if ( $id && current_user_can( 'edit_post', $id ) ) {
+				$request = new \WP_REST_Request( 'GET', '/wp-json/wp/v2/snapshot/' . $id );
+				$post_data = ( new \WP_REST_Posts_Controller( 'snapshot' ) )->prepare_item_for_response( get_post( $id ), $request );
+				$props .= 'data-preview-post="' . esc_attr( json_encode(  $post_data->data  ) ). '"';
+			}
+		}
 
 		return '<div
 			data-' . self::TEXT_DOMAIN . '

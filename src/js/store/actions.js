@@ -1,6 +1,7 @@
-export const appDidMount = termId => ({
+export const appDidMount = (termId, previewPost) => ({
   type: 'APP_DID_MOUNT',
   termId,
+  previewPost,
 });
 
 export const receivePosts = posts => ({

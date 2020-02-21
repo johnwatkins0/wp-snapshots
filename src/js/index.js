@@ -5,6 +5,7 @@ import PropTypes from 'prop-types';
 import { BrowserRouter, Route, Switch, Link } from 'react-router-dom';
 import DocumentTitle from 'react-document-title';
 import get from 'lodash.get';
+import { parse } from 'qs';
 
 import Archive from './Archive';
 import Single from './Single';
@@ -51,7 +52,7 @@ export class App extends Component {
   }
 
   componentDidMount() {
-    this.dispatch(appDidMount(this.props.termId));
+    this.dispatch(appDidMount(this.props.termId, this.props.previewPost || null));
   }
 
   getState = () => ({ ...this.state });
@@ -125,6 +126,51 @@ export class App extends Component {
               );
             }}
           />
+
+          <Route
+            path="/"
+            component={({ location }) => {
+              const search = location.search || '';
+              const params = parse(search.replace('?', ''));
+              if (!('preview' in params) || !('p' in params)) {
+                return null;
+              }
+
+              if (!this.props.previewPost) {
+                return null;
+              }
+
+              const post = this.state.posts.find(({ id }) => id === Number(params.p));
+              return (
+                <DocumentTitle
+                  key={get(post, 'id', '')}
+                  title={get(post, ['title', 'rendered'], document.title) + this.props.titleAppend}
+                >
+                  <div>
+                    <div className="SnapshotsMain__title-container">
+                      <h1>
+                        <Link
+                          href={`/snapshots/${this.props.termSlug}/`}
+                          to={`/snapshots/${this.props.termSlug}/`}
+                          dangerouslySetInnerHTML={{ __html: this.props.termName }}
+                        />
+                      </h1>
+                    </div>
+                    {post &&
+                      post.image && (
+                        <ScrollToTopSingle {...post} basename={this.props.basenamePrefix} />
+                      )}
+                    <MiniNav
+                      posts={getPosts(this.state)}
+                      termName={this.props.termName}
+                      termSlug={this.props.termSlug}
+                    />
+                  </div>
+                </DocumentTitle>
+              );
+            }}
+          />
+
         </Switch>
       </main>
     </BrowserRouter>
@@ -141,6 +187,7 @@ export const startApp = () => {
         termSlug={root.getAttribute('data-term-slug')}
         termDescription={root.getAttribute('data-term-description')}
         basenamePrefix={root.getAttribute('data-basename-prefix').replace(/\/$/, '') || ''}
+        previewPost={JSON.parse(root.getAttribute('data-preview-post'))}
       />,
       root,
     );

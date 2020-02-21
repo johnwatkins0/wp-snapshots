@@ -34,6 +34,10 @@ class Single extends React.Component {
 
     image = get(this, ['props', 'image', 'media_details', 'sizes', 'large', 'source_url'], '');
 
+    if (!image) {
+      image = get(this, ['props', 'image', 'media_details', 'sizes', 'medium', 'source_url'], '');
+    }
+
     if (image !== '') {
       this.setState({ image });
     }

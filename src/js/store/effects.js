@@ -15,6 +15,9 @@ const effects = {
 
     const response = await fetch(`${url}?${params}`);
     const posts = await response.json();
+    if (action.previewPost) {
+      posts.push(action.previewPost);
+    }
     dispatch(receivePosts(posts));
   },
 
